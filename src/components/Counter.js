@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
+import {increment, decrement} from '../actions/counter';
 
 
 const Counter =({counter,increment, decrement})=>{
@@ -19,14 +20,15 @@ const Counter =({counter,increment, decrement})=>{
     )
 }
 function mapStateToProps(state) {
-    return {counter:state.counter};
+  const {counter}=state.counterReducer;
+    return {counter:counter};
   }
 
   const mapDispatchToProps = dispatch => {
     return {
       // dispatching plain actions
-      increment: () => dispatch({ type: 'INCREMENT' }),
-      decrement: () => dispatch({ type: 'DECREMENT' }),
+      increment: () =>{dispatch(increment())},
+      decrement: () => dispatch(decrement()),
 
     }
   }

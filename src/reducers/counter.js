@@ -4,8 +4,7 @@ const InitialState={
     counter:0
 }
 
-const reducer =(state=InitialState, action)=>{
-    
+const counterReducer =(state=InitialState, action)=>{
     // eslint-disable-next-line default-case
     switch(action.type){
         case INCREMENT: 
@@ -20,4 +19,4 @@ const reducer =(state=InitialState, action)=>{
                     return state
     }
 }
-export default reducer;
+export default counterReducer;

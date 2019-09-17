@@ -6,10 +6,12 @@ import './index.scss';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './App';
-import reducer from './reducers/counter'
+import {rootReducer} from './reducers';
 import * as serviceWorker from './serviceWorker';
 
-let store = createStore(reducer)
+
+let store = createStore(rootReducer);
+console.log(store.getState())
 // store.subscribe(()=>{console.log(store)})
 console.log(i18n)
 ReactDOM.render(<I18nextProvider i18n={i18n}><Provider store={store}><App /></Provider></I18nextProvider>, document.getElementById('root'));

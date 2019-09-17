@@ -1,11 +1,27 @@
-import i18n from "i18next";
-import LanguageDetector from "./i18next-browser-languagedetector";
-
-i18n.use(LanguageDetector).init({
-  // we init with resources
-  resources: {
+ // we init with resources
+  const resources= {
     en: {
       translations: {
+        AbouttheCompany: "About the Company",
+        Product: "Product",
+        Employment: "Employment",
+        CustomerSupport: "Customer Support",
+        MessagefromCEO: "Message from CEO",
+        History: "History",
+        Location:"Location",
+        Gases: "Gases",
+        Chemical: "Chemical",
+        Gasket: "Gasket",
+        BEAD: "BEAD",
+        FDT: "FDT",
+        ShutterValve: "Shutter Valve",
+        Apply: "Apply",
+        Notice: "Notice",
+        Catalogue: "Catalogue",
+        MSDS: "MSDS",
+        PromotionCenter: "Promotion Center",
+        Inquiry: "Inquiry",
+        
         Introduction: "Introduction",
         "is an internationalization-framework which offers a complete solution to localize your product from web to mobile and desktop":
           "is an internationalization-framework which offers a complete solution to localize your product from web to mobile and desktop",
@@ -20,6 +36,25 @@ i18n.use(LanguageDetector).init({
     },
     jap: {
       translations: {
+        AbouttheCompany: "회사소개",
+        Product: "제품소개",
+        Employment: "인재채용",
+        CustomerSupport: "고객지원",
+        MessagefromCEO: "인사말",
+        History: "회사연혁",
+        Location:"찾아오시는 길",
+        Gases: "Gases",
+        Chemical: "Chemical",
+        Gasket: "Gasket",
+        BEAD: "BEAD",
+        FDT: "FDT",
+        ShutterValve: "Shutter Valve",
+        Apply: "상시채용",
+        Notice: "공지사항",
+        Catalogue: "카탈로그",
+        MSDS: "MSDS",
+        PromotionCenter: "홍보자료실",
+        Inquiry: "온라인문의",
         Introduction: "前書き",
         "is an internationalization-framework which offers a complete solution to localize your product from web to mobile and desktop":
           "Webからモバイルとデスクトップに製品をローカライズするための完全なソリューションを提供する国際化フレームワークです",
@@ -77,24 +112,6 @@ i18n.use(LanguageDetector).init({
           "Flexibilité d'utiliser d'autres packages"
       }
     }
-  },
- fallbackLng: 'en-US',
-  debug: true,
-
-  // have a common namespace used around the full app
-  ns: ["translations"],
-  defaultNS: "translations",
-
-  keySeparator: false, // we use content as keys
-
-  interpolation: {
-    escapeValue: false, // not needed for react!!
-    formatSeparator: ","
-  },
-
-  react: {
-    wait: true
   }
-});
 
-export default i18n;
+export default resources;

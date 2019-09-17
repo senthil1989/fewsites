@@ -1,17 +1,19 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch  } from 'react-router-dom';
 import Header from './containers/header';
-import Counter from './components/Counter';
-import Debraj from './components/debraj';
+import CoverIndex from './components/animationIndex';
+// import Debraj from './components/debraj';
+import AsideBar from './containers/asidebar';
 import Sekar from './components/sekar';
 import Notfound from './components/page_404';
+import { withTranslation } from 'react-i18next';
 function App() {
   return (
     <Router>
-        <Header />
+        <Header/>
         <Switch>
-        <Route exact  path='/' component={Counter} />
-        <Route path='/debraj' component={Debraj} />
+        <Route exact  path='/' component={CoverIndex} />
+        <Route path='/debraj' component={AsideBar} />
         <Route path='/sekar' component={Sekar} />
         <Route component={Notfound} />
         </Switch>
@@ -19,4 +21,4 @@ function App() {
   );
 }
 
-export default App;
+export default withTranslation('common')(App); 

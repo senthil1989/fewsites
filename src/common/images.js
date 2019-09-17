@@ -1,33 +1,26 @@
-  import React ,{useState,useEffect}from 'react';
+import React from 'react';
+import flag2 from './assets/images/flag2.png';
+import flag1 from './assets/images/flag1.png';
+import logo from './assets/images/logo.png';
+import mainbg2 from './assets/images/mainbg2.png';
+import ballon from './assets/images/ballon.png';
+import greet from './assets/images/greet.png';
 
-  const image2base64 = require('image-to-base64');
-
-
-
-
+const images ={
+   'flag2':<img src={flag2}  alt="us" />,
+   'flag1':<img src={flag1}  alt="kor" />,
+   'logo':<img src={logo}  alt="logo" />,
+   'mainbg2':<img class="hlayer" src={mainbg2}  alt="mainbg2" />,
+   'ballon':<img class="blayer" src={ballon}  alt="ballon" />,
+   'greet':<img class="" src={greet}  alt="greet" />
+}
 function Imgfunction(img) {
-const [dataUrl, setdataUrl] = useState(null);
+// const [imgData, setimgData]=useState(img);
 
-    var imgs = `./assets/images/${img}.png`;
-    console.log(imgs)
-    useEffect(()=>{
-    image2base64(imgs) // you can also to use url
-      .then(
-          (response) => {
-            setdataUrl(response); //cGF0aC90by9maWxlLmpwZw==
-          }
-      )
-      .catch(
-          (error) => {
-              console.log(error); //Exepection error....
-          }
-      )
-        }
-    )
-      // let dataURL=getBase64Image(imgs);
-    let imgURL= `data:image/png;base64,${dataUrl}`;
-    console.log(imgURL)
-    return imgURL
+//     useEffect(()=>setimgData(imgData))
+//     console.log(imgData)
+   return images[img];
+
 }
 // data:image/png;base64,
 export default Imgfunction;
