@@ -1,8 +1,11 @@
 import React from 'react';
-import Submenu from '../components/sidemenu';
+import Submenu from './sidemenu';
+import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
-import TabPanel from '../components/rightPanel';
+import TabPanel from './rightPanel';
 import Imgfunction from '../common/images';
+import MessageCeo from './messageceo';
+import HistoryCeo from './history';
 
 function a11yProps(index) {
   return {
@@ -20,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function AsideBar(){
+function RightContent(){
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -28,16 +31,17 @@ function AsideBar(){
     setValue(newValue);
   }
   return(
-    <div class="s-container">
-      <div>
+      <>
+      <div className="s-fixebar">
         <span>{Imgfunction('greet')}</span>
       <Submenu classes={classes} value={value} a11yProps={a11yProps} handleChange={handleChange}/>
       </div>
+      <div className="s-right-top"> 
       <TabPanel value={value} index={0}>
-        Item One
+        <MessageCeo/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <HistoryCeo/>
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
@@ -54,8 +58,9 @@ function AsideBar(){
       <TabPanel value={value} index={6}>
         Item Seven
       </TabPanel>
-    </div>
+      </div>
+    </>
   )
 }
 
-export default AsideBar;
+export default RightContent;

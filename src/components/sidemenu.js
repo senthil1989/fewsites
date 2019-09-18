@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
@@ -13,7 +12,7 @@ export default function Submenu({handleChange,a11yProps, value,classes }) {
     <div className={classes.root}>
       <Tabs
         orientation="vertical"
-        variant=""
+        variant="scrollable"
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"

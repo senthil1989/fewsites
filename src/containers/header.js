@@ -30,12 +30,7 @@ function TemporaryDrawer() {
   });
   const [draw, setdraw] = React.useState('close');
   const [expanded, setOpen] = React.useState({});
-  const [open, setOpen1] = React.useState(true);
   const domRef = React.useRef(null);
-
-  React.useEffect(() => {
-    console.log(domRef.current); // DOM node
-  }, []);
 
   function handleClick(id) { 
     setOpen({expanded: expanded, [id]:true});
@@ -62,15 +57,15 @@ function TemporaryDrawer() {
             "name":`${t("AbouttheCompany")}`,
             "submenu":[ 
                { 
-                  "id":1,
+                  "id":11,
                   "sname":`${t("MessagefromCEO")}`
                },
                { 
-                  "id":2,
+                  "id":12,
                   "sname":`${t("History")}`
                },
                { 
-                  "id":3,
+                  "id":13,
                   "sname":`${t("Location")}`
                },
    
@@ -82,27 +77,27 @@ function TemporaryDrawer() {
             "name":`${t("Product")}`,
             "submenu":[ 
                { 
-                  "id":1,
+                  "id":21,
                   "sname":`${t("Gases")}`
                },
                { 
-                  "id":2,
+                  "id":22,
                   "sname":`${t("Chemical")}`
                },
                { 
-                  "id":3,
+                  "id":23,
                   "sname":`${t("Gasket")}`
                },
                { 
-                  "id":4,
+                  "id":24,
                   "sname":`${t("BEAD")}`
                },
                { 
-                  "id":4,
+                  "id":25,
                   "sname":`${t("FDT")}`
                },
                { 
-                  "id":4,
+                  "id":26,
                   "sname":`${t("ShutterValve")}`
                }
             ],
@@ -113,11 +108,11 @@ function TemporaryDrawer() {
             "name":`${t("Employment")}`,
             "submenu":[ 
                { 
-                  "id":1,
+                  "id":31,
                   "sname":`${t("Employment")}`
                },
                { 
-                  "id":2,
+                  "id":32,
                   "sname":`${t("Apply")}`
                },
    
@@ -129,23 +124,23 @@ function TemporaryDrawer() {
             "name":`${t("CustomerSupport")}`,
             "submenu":[ 
                { 
-                  "id":1,
+                  "id":41,
                   "sname":`${t("Notice")}`
                },
                { 
-                  "id":2,
+                  "id":42,
                   "sname":`${t("Catalogue")}`
                },
                { 
-                  "id":3,
+                  "id":43,
                   "sname":`${t("MSDS")}`
                },
                { 
-                  "id":4,
+                  "id":44,
                   "sname":`${t("PromotionCenter")}`
                },
                { 
-                "id":4,
+                "id":45,
                 "sname":`${t("Inquiry")}`
                 }
             ],
@@ -159,33 +154,33 @@ function TemporaryDrawer() {
   }
   const list = getItems();
   const sideList = side => (  
-    <div class="header-main">
-    <div class="h-flag">
+    <div className="header-main">
+    <div className="h-flag">
         <span id="en"onClick={() => changeLanguage('en')}>{Imgfunction('flag2')}</span>
         <span id="jap"onClick={() => changeLanguage('jap')}>{Imgfunction('flag1')}</span>
       </div>
      
     <div
-      class={classes.list}
+      className={classes.list}
       role="presentation"
       onKeyDown={toggleDrawer(side, false)}
     >
-       <div class="h-logo">{Imgfunction('logo')}</div>  
+       <div className="h-logo">{Imgfunction('logo')}</div>  
       <List>
         {list.items.map((text,index) => (
-         <> 
-          <ListItem button  key={index} ref={domRef} onClick={()=>handleClick(index)}>
+         <React.Fragment key={text.name}> 
+          <ListItem button  key={text.id} ref={domRef} onClick={()=>handleClick(index)}>
           <ListItemText primary={text.name} /> 
         </ListItem>
         <Divider />
-        <Collapse in={expanded[index]}  key={text.name}  timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            {text.submenu.map((submenus, index)=>{ return(<ListItem button  key={submenus.id} className={classes.nested} >
+        <Collapse in={expanded[index]}  key={text.id+text.name}  timeout="auto" unmountOnExit>
+          <List component="div" disablePadding key={text.id+index.toString()}>
+            {text.submenu.map((submenus, index)=>{ return(<ListItem button  key={submenus.id+"sub"} className={classes.nested} >
               <ListItemText key={submenus.id} primary={submenus.sname} />
             </ListItem>)})}
           </List>
         </Collapse>
-        </>
+        </React.Fragment>
         ))}
       </List>
       {/* <List>
@@ -202,7 +197,7 @@ function TemporaryDrawer() {
 
   return (
     <>
-      <div id="nav-icon0" class={`${draw} `} onClick={toggleDrawer('right', !state.right)}>
+      <div id="nav-icon0" className={`${draw} `} onClick={toggleDrawer('right', !state.right)}>
         <span></span>
         <span></span>
         <span></span>

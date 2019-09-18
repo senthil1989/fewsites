@@ -1,3 +1,4 @@
+@import '../../../App.scss';
 .header-main{
     margin:10px;
     .h-flag {
@@ -27,5 +28,24 @@
     flex: 1 1;
     width: 100%;
     flex-direction: row;
-    margin: 0 auto;
+   
+    .s-right-top{
+        margin-top: 70px;
+        border-left: 1px solid #ddd;
+        max-width: 985px;
+        margin: 70px auto 0 339px;
+        .vertical-line{
+            text-align: center;
+            padding: 40px 0;
+        }
+    }
+    .s-fixebar{
+        position: fixed;
+    }
+}
+.MuiContainer-maxWidthLg {
+    @include desktop{
+    max-width: 1495px !important;
+    padding: 0 !important;
+    }
 }

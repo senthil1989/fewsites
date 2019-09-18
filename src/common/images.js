@@ -5,14 +5,20 @@ import logo from './assets/images/logo.png';
 import mainbg2 from './assets/images/mainbg2.png';
 import ballon from './assets/images/ballon.png';
 import greet from './assets/images/greet.png';
+import redicon from './assets/images/red_icon.png';
+import greetBanner from './assets/images/greetBanner.jpg';
+import greetLine from './assets/images/greetLine.png';
 
 const images ={
    'flag2':<img src={flag2}  alt="us" />,
    'flag1':<img src={flag1}  alt="kor" />,
    'logo':<img src={logo}  alt="logo" />,
-   'mainbg2':<img class="hlayer" src={mainbg2}  alt="mainbg2" />,
-   'ballon':<img class="blayer" src={ballon}  alt="ballon" />,
-   'greet':<img class="" src={greet}  alt="greet" />
+   'mainbg2':<img className="hlayer" src={mainbg2}  alt="mainbg2" />,
+   'ballon':<img className="blayer" src={ballon}  alt="ballon" />,
+   'greet':<img className="" src={greet}  alt="greet" />,
+   'redicon':<img className="" src={redicon}  alt="redicon" />,
+   'greetBanner':<img className="" src={greetBanner}  alt="greetBanner" />,
+   'greetLine':<img className="" src={greetLine}  alt="greetLine" />
 }
 function Imgfunction(img) {
 // const [imgData, setimgData]=useState(img);
