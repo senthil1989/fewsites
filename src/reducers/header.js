@@ -1,30 +1,25 @@
 // /* eslint-disable default-case */
-// import { EXPAND, INBOX, STARRED } from '../actions/header';
+import {TABS} from '../actions/header';
 
-// const headerState={
-//     exOpen:false,
-// }
+const headerState={
+    value:'',
+    sidebarName: "",
+    sideContent: "",
+    icon: ""
+}
 
-// export  const headerReducer =(state=headerState, action)=>{
-//     // eslint-disable-next-line default-case
-//     console.log(action.type)
-//     switch(action.type){
-        
-//         case EXPAND:
-//             switch(action.text){                
-//                 case INBOX:
-//                         console.log(action.text)
-//                         var hnewState={...state}
-//                         hnewState.exOpen=!hnewState.open
-//                     return hnewState.exOpen;
-//                 case STARRED:
-//                         let newState={...state}
-//                         hnewState.exOpen=!hnewState.open
-//                     return newState.exOpen; 
-//                     default:
-//                             return false   
-//             }
-//             default:
-//                 return false;
-//     }
-// }
+export const headerReducer =(state=headerState, action)=>{
+    const{type ,menu,newValue} =action
+    // eslint-disable-next-line default-case
+    switch(type){
+                case TABS:
+                        var hnewState={...state};
+                        hnewState.value=newValue;
+                        hnewState.icon=menu.icon;
+                        hnewState.sideContent=menu.sideContent;
+                        hnewState.sidebarName=menu.sidebarName
+                    return hnewState;
+            default:
+                return 0;
+    }
+}

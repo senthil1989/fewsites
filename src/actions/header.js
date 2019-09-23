@@ -1,10 +1,9 @@
-// export const EXPAND = 'EXPAND';
-// export const INBOX = 'Inbox';
-// export const STARRED = 'Starred';
-
-// export const handleClick =(text)=>{
-//     return (
-//         {type:EXPAND,text}
-//     )
-
-// }
+export const TABS = 'TABS';
+export  const handleChange=(newValue,menu)=> {
+        return(
+            {type:TABS,
+            newValue,
+            menu
+            }
+        )
+}

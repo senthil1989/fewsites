@@ -1,0 +1,98 @@
+export const Routes = [
+    {
+      path: '/message',
+      sidebarName: 'MessagefromCEO',
+      sideContent: 'MessagefromCEO',
+      icon: 'greet',
+    },
+    {
+      path: '/history',
+      sidebarName: 'History',
+      sideContent: 'History',
+      icon: 'his',
+    },
+    {
+       path: '/location',
+       sidebarName: 'Location',
+       sideContent: 'Location',
+       icon: 'loc',
+    },
+    {
+        path: '/gases',
+        sidebarName: 'Gases',
+        sideContent: 'MessagefromCEO',
+        icon: 'vector_1',
+     },
+     {
+        path: '/chemical',
+        sidebarName: 'Chemical',
+        sideContent: 'MessagefromCEO',
+        icon: 'vector_2',
+     },
+     {
+        path: '/gasket',
+        sidebarName: 'Gasket',
+        sideContent: 'MessagefromCEO',
+        icon: 'vector_3',
+     },
+     {
+        path: '/bead',
+        sidebarName: 'Bead',
+        sideContent: 'MessagefromCEO',
+        icon: 'vector_4',
+     },
+     {
+        path: '/fdt',
+        sidebarName: 'FDT',
+        sideContent: 'MessagefromCEO',
+        icon: 'vector_5',
+     },
+     {
+        path: '/shuttervalve',
+        sidebarName: 'ShutterValve',
+        sideContent: 'MessagefromCEO',
+        icon: 'vector_6',
+     },
+     {
+        path: '/employment',
+        sidebarName: 'Employment',
+        sideContent: 'MessagefromCEO',
+        icon: 'recruitIcon',
+     },
+     {
+        path: '/apply',
+        sidebarName: 'Apply',
+        sideContent: 'MessagefromCEO',
+        icon: 'recruitIcon',
+     },
+     {
+        path: '/notice',
+        sidebarName: 'Notice',
+        sideContent: 'MessagefromCEO',
+        icon: 'notice',
+     },
+     {
+        path: '/catalogue',
+        sidebarName: 'Catalogue',
+        sideContent: 'MessagefromCEO',
+        icon: 'catalogue',
+     },
+     {
+        path: '/msds',
+        sidebarName: 'MSDS',
+        sideContent: 'MessagefromCEO',
+        icon: 'catalogue',
+     },
+     {
+        path: '/promotioncenter',
+        sidebarName: 'PromotionCenter',
+        sideContent: 'MessagefromCEO',
+        icon: 'prRoom',
+     },
+     {
+        path: '/inquiry',
+        sidebarName: 'Inquiry',
+        sideContent: 'MessagefromCEO',
+        icon: 'recruitIcon',
+     },
+  ];

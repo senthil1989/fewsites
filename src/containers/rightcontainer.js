@@ -1,22 +1,15 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import RightContent from '../components/rightcontent'
+import RightContent from '../components/rightcontent';
+import {Routes} from '../components/routelist';
 
-const renderContent=(match)=>{
-  console.log(match);
-  if(match.url=="/debraj"){
-    return <RightContent />
-  }
-
-}
 
 function RightContainer(props){
-  const {match}=props;
-  console.log(match)
+  console.log(props)
   return(
     <Container maxWidth="lg">
     <div className="s-container">
-        {renderContent(match)}
+        <RightContent {...props} routes={Routes} />
       </div>
     </Container> 
   )

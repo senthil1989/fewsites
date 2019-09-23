@@ -6,15 +6,17 @@ import CoverIndex from './components/animationIndex';
 import RightContainer from './containers/rightcontainer';
 import Sekar from './components/sekar';
 import Notfound from './components/page_404';
+import {Routes} from './components/routelist';
 import { withTranslation } from 'react-i18next';
 
-function App() {
+
+function App(props) {
   return (
     <Router>
         <Header/>
         <Switch>
         <Route exact  path='/' component={CoverIndex} />
-        <Route path='/debraj' component={RightContainer} />
+        { Routes.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
         <Route path='/sekar' component={Sekar} />
         <Route component={Notfound} />
         </Switch>

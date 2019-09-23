@@ -1,8 +1,11 @@
 import React from 'react';
 // import {connect} from 'react-redux';
 // import {handleClick} from '../actions/header';
+import {connect} from 'react-redux';
 import '../styles/drawer.scss';
+import { Link } from 'react-router-dom';
 import '../common/assets/css/styles.scss';
+import {handleChange} from '../actions/header';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -12,6 +15,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Imgfunction from '../common/images';
 import { useTranslation } from 'react-i18next';
+
 // import headerReducer from '../reducers/header';
 
 const useStyles = makeStyles({
@@ -22,7 +26,7 @@ const useStyles = makeStyles({
 
 
 
-function TemporaryDrawer() {
+function TemporaryDrawer({handleChange}) {
   const {t, i18n} =useTranslation();
   const classes = useStyles();
   const [state, setState] = React.useState({
@@ -50,104 +54,162 @@ function TemporaryDrawer() {
   };
 
   const getItems=()=> {
-    var json =  { 
-      "items":[ 
-         { 
-            "id":1,
-            "name":`${t("AbouttheCompany")}`,
-            "submenu":[ 
-               { 
-                  "id":11,
-                  "sname":`${t("MessagefromCEO")}`
-               },
-               { 
-                  "id":12,
-                  "sname":`${t("History")}`
-               },
-               { 
-                  "id":13,
-                  "sname":`${t("Location")}`
-               },
-   
-            ],
-   
-         },
-         { 
-            "id":2,
-            "name":`${t("Product")}`,
-            "submenu":[ 
-               { 
-                  "id":21,
-                  "sname":`${t("Gases")}`
-               },
-               { 
-                  "id":22,
-                  "sname":`${t("Chemical")}`
-               },
-               { 
-                  "id":23,
-                  "sname":`${t("Gasket")}`
-               },
-               { 
-                  "id":24,
-                  "sname":`${t("BEAD")}`
-               },
-               { 
-                  "id":25,
-                  "sname":`${t("FDT")}`
-               },
-               { 
-                  "id":26,
-                  "sname":`${t("ShutterValve")}`
-               }
-            ],
-   
-         },
-         { 
-            "id":3,
-            "name":`${t("Employment")}`,
-            "submenu":[ 
-               { 
-                  "id":31,
-                  "sname":`${t("Employment")}`
-               },
-               { 
-                  "id":32,
-                  "sname":`${t("Apply")}`
-               },
-   
-            ],
-   
-         },
-         { 
-            "id":4,
-            "name":`${t("CustomerSupport")}`,
-            "submenu":[ 
-               { 
-                  "id":41,
-                  "sname":`${t("Notice")}`
-               },
-               { 
-                  "id":42,
-                  "sname":`${t("Catalogue")}`
-               },
-               { 
-                  "id":43,
-                  "sname":`${t("MSDS")}`
-               },
-               { 
-                  "id":44,
-                  "sname":`${t("PromotionCenter")}`
-               },
-               { 
-                "id":45,
-                "sname":`${t("Inquiry")}`
-                }
-            ],
-   
-         }
+    var json = {
+      items: [
+        {
+          id: 1,
+          name: `${t("AbouttheCompany")}`,
+          submenu: [
+            {
+              id: "message",
+              sname: `${t("MessagefromCEO")}`,
+              url: "/message",
+              sidebarName: "MessagefromCEO",
+              sideContent: "MessagefromCEO",
+              icon: "greet"
+            },
+            {
+              id: "history",
+              sname: `${t("History")}`,
+              url: "/history",
+              sidebarName: "History",
+              sideContent: "History",
+              icon: "his"
+            },
+            {
+              id: "location",
+              sname: `${t("Location")}`,
+              url: "/location",
+              sidebarName: "Location",
+              sideContent: "Location",
+              icon: "loc"
+            }
+          ]
+        },
+        {
+          id: 2,
+          name: `${t("Product")}`,
+          submenu: [
+            {
+              id: "gases",
+              sname: `${t("Gases")}`,
+              url: "/gases",
+              sidebarName: "Gases",
+              sideContent: "MessagefromCEO",
+              icon: "vector_1"
+            },
+            {
+              id: "chemical",
+              sname: `${t("Chemical")}`,
+              url: "/chemical",
+              sidebarName: "Chemical",
+              sideContent: "MessagefromCEO",
+              icon: "vector_2"
+            },
+            {
+              id: "gasket",
+              sname: `${t("Gasket")}`,
+              url: "/gasket",
+              sidebarName: "Gasket",
+              sideContent: "MessagefromCEO",
+              icon: "vector_3"
+            },
+            {
+              id: "bead",
+              sname: `${t("BEAD")}`,
+              url: "/bead",
+              sidebarName: "Bead",
+              sideContent: "MessagefromCEO",
+              icon: "vector_4"
+            },
+            {
+              id: "fdt",
+              sname: `${t("FDT")}`,
+              url: "/fdt",
+              sidebarName: "FDT",
+              sideContent: "MessagefromCEO",
+              icon: "vector_5"
+            },
+            {
+              id: "shuttervalve",
+              sname: `${t("ShutterValve")}`,
+              url: "/shuttervalve",
+              sidebarName: "ShutterValve",
+              sideContent: "MessagefromCEO",
+              icon: "shutter"
+            }
+          ]
+        },
+        {
+          id: 3,
+          name: `${t("Employment")}`,
+          submenu: [
+            {
+              id: "employment",
+              sname: `${t("Employment")}`,
+              url: "/employment",
+              sidebarName: "Employment",
+              sideContent: "MessagefromCEO",
+              icon: "recruitIcon"
+            },
+            {
+              id: "apply",
+              sname: `${t("Apply")}`,
+              url: "/apply",
+              sidebarName: "Apply",
+              sideContent: "MessagefromCEO",
+              icon: "recruitIcon"
+            }
+          ]
+        },
+        {
+          id: 4,
+          name: `${t("CustomerSupport")}`,
+          submenu: [
+            {
+              id: "notice",
+              sname: `${t("Notice")}`,
+              url: "/notice",
+              sidebarName: "Notice",
+              sideContent: "MessagefromCEO",
+              icon: "notice"
+            },
+            {
+              id: "catalogue",
+              sname: `${t("Catalogue")}`,
+              url: "/catalogue",
+              sidebarName: "Catalogue",
+              sideContent: "MessagefromCEO",
+              icon: "catalogue"
+            },
+            {
+              id: "msds",
+              sname: `${t("MSDS")}`,
+              url: "/msds",
+              sidebarName: "MSDS",
+              sideContent: "MessagefromCEO",
+              icon: "catalogue"
+            },
+            {
+              id: "promotioncenter",
+              sname: `${t("PromotionCenter")}`,
+              url: "/promotioncenter",
+              sidebarName: "PromotionCenter",
+              sideContent: "MessagefromCEO",
+              icon: "prRoom"
+            },
+            {
+              id: "inquiry",
+              sname: `${t("Inquiry")}`,
+              url: "/inquiry",
+              sidebarName: "Inquiry",
+              sideContent: "MessagefromCEO",
+              icon: "recruitIcon"
+            }
+          ]
+        }
       ]
-   }
+    };
   
   
   return json;
@@ -175,9 +237,9 @@ function TemporaryDrawer() {
         <Divider />
         <Collapse in={expanded[index]}  key={text.id+text.name}  timeout="auto" unmountOnExit>
           <List component="div" disablePadding key={text.id+index.toString()}>
-            {text.submenu.map((submenus, index)=>{ return(<ListItem button  key={submenus.id+"sub"} className={classes.nested} >
-              <ListItemText key={submenus.id} primary={submenus.sname} />
-            </ListItem>)})}
+            {text.submenu.map((submenus, index)=>{ return(<Link to={submenus.url}><ListItem button  key={submenus.id+"sub"} className={classes.nested} >
+            <ListItemText key={submenus.id} primary={submenus.sname} onClick={()=>handleChange(submenus.id, submenus)} />
+            </ListItem></Link>)})}
           </List>
         </Collapse>
         </React.Fragment>
@@ -212,6 +274,22 @@ function TemporaryDrawer() {
   );
   
 }
+function mapStateToProps(state) {
+   console.log(state)
+   const {value}=state.headerReducer;
+     return {value:value};
+   }
+ 
+   const mapDispatchToProps = dispatch => {
+     return {
+       // dispatching plain actions
+       handleChange: (id,submenus) =>{setTimeout(() => {
+        // Yay! Can invoke sync or async actions with `dispatch`
+        dispatch(handleChange(id,submenus));
+      }, 10);},
+ 
+     }
+   }
 // function mapStateToProps(state) {
 //   console.log(state)
 //   return {exOpen:state.headerReducer};
@@ -222,4 +300,4 @@ function TemporaryDrawer() {
 //     handleClick: text => dispatch(handleClick(text))
 // })
 // export default  connect(mapStateToProps, mapDispatchToProps)(TemporaryDrawer)
-export default  TemporaryDrawer;
+export default  connect(mapStateToProps, mapDispatchToProps)(TemporaryDrawer);

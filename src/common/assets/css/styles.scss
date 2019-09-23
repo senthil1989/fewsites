@@ -1,6 +1,5 @@
 @import '../../../App.scss';
 .header-main{
-    margin:10px;
     .h-flag {
         span {
             img{
@@ -21,6 +20,14 @@
             cursor: pointer;
         }
     }
+    h1{
+        position: absolute;
+    }
+    p{
+        position: absolute;
+        top: 167px;
+        padding: 20px;
+    }
 
 }
 .s-container{
@@ -31,9 +38,9 @@
    
     .s-right-top{
         margin-top: 70px;
-        border-left: 1px solid #ddd;
+        // border-left: 1px solid #ddd;
         max-width: 985px;
-        margin: 70px auto 0 339px;
+        margin: 70px auto 0 374px;
         .vertical-line{
             text-align: center;
             padding: 40px 0;
@@ -41,6 +48,9 @@
     }
     .s-fixebar{
         position: fixed;
+        bottom: 0;
+        top: 0;
+        background:$sidebar-background
     }
 }
 .MuiContainer-maxWidthLg {
@@ -48,4 +58,45 @@
     max-width: 1495px !important;
     padding: 0 !important;
     }
+}
+.MuiFormControl-root {
+    justify-content: center;
+}
+.MuiFormControl-marginNormal {
+    margin-top: 0px !important; 
+    margin-bottom: 0px !important; 
+}
+.formrow{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid $formborder;
+    .formlabel{
+        width: 200px;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    span{
+        padding: 20px 10px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.MuiOutlinedInput-input {
+    padding: 6.5px 14px !important;
+}
+.para{
+    background-color: #fff;
+    padding: 30px 10px;
+    height: 330px;
+    overflow: auto;
+    margin-top: 30px;
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+}
+.checkbtn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
