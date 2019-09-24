@@ -17,7 +17,6 @@ import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles({
   list: {
-    width: 350
   }
 });
 
@@ -66,7 +65,39 @@ function SideBar(props) {
           path: "/gases",
           sidebarName: "Gases",
           sideContent: "MessagefromCEO",
-          icon: "vector_1"
+          icon: "vector_1",
+          submenu:[
+            {
+              id:"Si₂H₆",
+              keyid:4,
+              path: "/gases/Si₂H₆",
+              sidebarName: "Si₂H₆",
+            },
+            {
+              id:"GeH₄",
+              keyid:4,
+              path: "/gases/GeH₄",
+              sidebarName: "GeH₄",
+            },
+            {
+              id:"C₃H₆",
+              keyid:4,
+              path: "/gases/C₃H₆",
+              sidebarName: "C₃H₆",
+            },
+            {
+              id:"C₄F₆",
+              keyid:4,
+              path: "/gases/C₄F₆",
+              sidebarName: "C₄F₆",
+            },
+            {
+              id:"C₃F₈",
+              keyid:4,
+              path: "/gases/C₃F₈",
+              sidebarName: "C₃F₈",
+            },
+          ]          
         },
         {
           id:"chemical",
@@ -74,7 +105,39 @@ function SideBar(props) {
           path: "/chemical",
           sidebarName: "Chemical",
           sideContent: "MessagefromCEO",
-          icon: "vector_2"
+          icon: "vector_2",
+          submenu:[
+            {
+              id:"H₃PO₄",
+              keyid:4,
+              path: "/gases/H₃PO₄",
+              sidebarName: "H₃PO₄",
+            },
+            {
+              id:"HF",
+              keyid:4,
+              path: "/gases/HF",
+              sidebarName: "HF",
+            },
+            {
+              id:"C₃H₆",
+              keyid:4,
+              path: "/gases/C₃H₆",
+              sidebarName: "C₃H₆",
+            },
+            {
+              id:"C₄F₆",
+              keyid:4,
+              path: "/gases/C₄F₆",
+              sidebarName: "C₄F₆",
+            },
+            {
+              id:"C₃F₈",
+              keyid:4,
+              path: "/gases/C₃F₈",
+              sidebarName: "C₃F₈",
+            },
+          ]
         },
         {
           id:"gasket",
@@ -82,7 +145,39 @@ function SideBar(props) {
           path: "/gasket",
           sidebarName: "Gasket",
           sideContent: "MessagefromCEO",
-          icon: "vector_3"
+          icon: "vector_3",
+          submenu:[
+            {
+              id:"Si₂H₆",
+              keyid:4,
+              path: "/gases/Si₂H₆",
+              sidebarName: "Si₂H₆",
+            },
+            {
+              id:"GeH₄",
+              keyid:4,
+              path: "/gases/GeH₄",
+              sidebarName: "GeH₄",
+            },
+            {
+              id:"C₃H₆",
+              keyid:4,
+              path: "/gases/C₃H₆",
+              sidebarName: "C₃H₆",
+            },
+            {
+              id:"C₄F₆",
+              keyid:4,
+              path: "/gases/C₄F₆",
+              sidebarName: "C₄F₆",
+            },
+            {
+              id:"C₃F₈",
+              keyid:4,
+              path: "/gases/C₃F₈",
+              sidebarName: "C₃F₈",
+            },
+          ]
         },
         {
           id:"bead",
@@ -90,7 +185,39 @@ function SideBar(props) {
           path: "/bead",
           sidebarName: "Bead",
           sideContent: "MessagefromCEO",
-          icon: "vector_4"
+          icon: "vector_4",
+          submenu:[
+            {
+              id:"Si₂H₆",
+              keyid:4,
+              path: "/gases/Si₂H₆",
+              sidebarName: "Si₂H₆",
+            },
+            {
+              id:"GeH₄",
+              keyid:4,
+              path: "/gases/GeH₄",
+              sidebarName: "GeH₄",
+            },
+            {
+              id:"C₃H₆",
+              keyid:4,
+              path: "/gases/C₃H₆",
+              sidebarName: "C₃H₆",
+            },
+            {
+              id:"C₄F₆",
+              keyid:4,
+              path: "/gases/C₄F₆",
+              sidebarName: "C₄F₆",
+            },
+            {
+              id:"C₃F₈",
+              keyid:4,
+              path: "/gases/C₃F₈",
+              sidebarName: "C₃F₈",
+            },
+          ]
         },
         {
           id:"fdt",
@@ -98,7 +225,39 @@ function SideBar(props) {
           path: "/fdt",
           sidebarName: "FDT",
           sideContent: "MessagefromCEO",
-          icon: "vector_5"
+          icon: "vector_5",
+          submenu:[
+            {
+              id:"Si₂H₆",
+              keyid:4,
+              path: "/gases/Si₂H₆",
+              sidebarName: "Si₂H₆",
+            },
+            {
+              id:"GeH₄",
+              keyid:4,
+              path: "/gases/GeH₄",
+              sidebarName: "GeH₄",
+            },
+            {
+              id:"C₃H₆",
+              keyid:4,
+              path: "/gases/C₃H₆",
+              sidebarName: "C₃H₆",
+            },
+            {
+              id:"C₄F₆",
+              keyid:4,
+              path: "/gases/C₄F₆",
+              sidebarName: "C₄F₆",
+            },
+            {
+              id:"C₃F₈",
+              keyid:4,
+              path: "/gases/C₃F₈",
+              sidebarName: "C₃F₈",
+            },
+          ]
         },
         {
           id:"shuttervalve",
@@ -106,7 +265,39 @@ function SideBar(props) {
           path: "/shuttervalve",
           sidebarName: "ShutterValve",
           sideContent: "MessagefromCEO",
-          icon: "shutter"
+          icon: "shutter",
+          submenu:[
+            {
+              id:"Si₂H₆",
+              keyid:4,
+              path: "/gases/Si₂H₆",
+              sidebarName: "Si₂H₆",
+            },
+            {
+              id:"GeH₄",
+              keyid:4,
+              path: "/gases/GeH₄",
+              sidebarName: "GeH₄",
+            },
+            {
+              id:"C₃H₆",
+              keyid:4,
+              path: "/gases/C₃H₆",
+              sidebarName: "C₃H₆",
+            },
+            {
+              id:"C₄F₆",
+              keyid:4,
+              path: "/gases/C₄F₆",
+              sidebarName: "C₄F₆",
+            },
+            {
+              id:"C₃F₈",
+              keyid:4,
+              path: "/gases/C₃F₈",
+              sidebarName: "C₃F₈",
+            },
+          ]
         }
       ],
       Employment: [
@@ -175,6 +366,31 @@ function SideBar(props) {
   };
 
   const list = getItems();
+
+  function renderSubitems(){
+    const sublist = Object.keys(list.Product);
+    console.log(sublist)
+    return(
+      <>
+      {sublist.map((id)=>{ return (
+        list.Product[id].submenu.map((submenus, index) => {
+          return (
+            <Link to={submenus.path}>
+              <ListItem button key={submenus.sidebarName + "sub"} >
+                <ListItemText
+                  key={submenus.sidebarName}
+                  primary={submenus.sidebarName}
+                  onClick={()=>handleChange(submenus.id,submenus)}
+                />
+              </ListItem>
+            </Link>
+          );
+        })
+      )})
+    }
+      </>
+    )
+  }
   const sideList = props => {
     const {match} = props.content;
     if (
@@ -218,21 +434,7 @@ function SideBar(props) {
         <div className="header-main">
           <div className={classes.list} role="presentation">
           <SidebarHeader match={match} list={list.Product}value={value} />
-            <List>
-              {list.Product.map((submenus, index) => {
-                return (
-                  <Link to={submenus.path}>
-                    <ListItem button key={submenus.sidebarName + "sub"} >
-                      <ListItemText
-                        key={submenus.sidebarName}
-                        primary={submenus.sidebarName}
-                        onClick={()=>handleChange(submenus.id,submenus)}
-                      />
-                    </ListItem>
-                  </Link>
-                );
-              })}
-            </List>
+            <List>{renderSubitems(list)}</List>
           </div>
         </div>
       );

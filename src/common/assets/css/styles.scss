@@ -100,3 +100,71 @@
     display: flex;
     justify-content: center;
 }
+.notice{
+    margin-top: 40px;
+.pane-vScroll{
+    margin-top: 40px;
+    table{
+        border: 2px solid #e7e7e7;
+        margin-bottom: 43px;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        th{
+            font-family: 'NotoSansCJKkr-Light';
+    font-size: 23px;
+    color: #363636;
+    background: #f5f5f5;
+    text-align: center;
+    font-weight: normal;;
+    border-bottom: none;
+    line-height: 1;
+    padding-right: 0;
+    padding-bottom: 6px;
+    width: 100px;
+        }
+    }
+}
+.searchBtn {
+    display: flex;
+    justify-content: flex-end;
+    button {
+        position: relative;
+        background: transparent;
+        outline: none;
+        border: none;
+        padding: 4px 7px;
+        right: -235px;
+        border-left: 2px solid #e7e7e7;
+}
+    input {
+        width: 235px;
+        height: 31px;
+        border: 2px solid #e7e7e7;
+        border-radius: 5px;
+        outline: none;
+        padding: 0;
+        padding-left: 10px;
+        padding-right: 50px;
+        font-family: 'NotoSansCJKkr-Regular';
+        font-size: 17px;
+        color: #e7e7e7;
+    }
+
+}
+}
+.figure-caption {
+    text-align: center;
+}
+.page-item:first-child .page-link {
+    text-decoration: underline;
+    color: red;
+}
+.page-link {
+    border: none;
+    /* border: 1px solid #dee2e6; */
+}
+.canIhelp{
+    text-align: center;
+}

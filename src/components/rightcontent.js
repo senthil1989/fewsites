@@ -4,7 +4,12 @@ import MessageCeo from './messageceo';
 import HistoryCeo from './history';
 import SideBar from './sidebar';
 import ApplyForm from './apply.js'
-import Employment from './employment.js'
+import Employment from './employment.js';
+import NoticeTable from './notice.js';
+import MsdsTable from './msds.js';
+import PromotionCenter from './promotioncenter';
+import InquiryForm from './inquiryform';
+import Catalogue from './catalogue';
 
 // function a11yProps(index) {
 //   return {
@@ -47,6 +52,41 @@ function RightContent(props){
             </div>
             )
           }
+          else if(match.url ==="/notice"){
+            return(
+              <div  index={4}>
+                <NoticeTable/>
+              </div>
+              )
+            }
+            else if(match.url ==="/msds"){
+              return(
+                <div  index={4}>
+                  <MsdsTable/>
+                </div>
+                )
+              }
+              else if(match.url ==="/promotioncenter"){
+                return(
+                  <div  index={4}>
+                    <PromotionCenter/>
+                  </div>
+                  )
+                }
+                else if(match.url ==="/inquiry"){
+                  return(
+                    <div  index={4}>
+                      <InquiryForm/>
+                    </div>
+                    )
+                  }
+                  else if(match.url ==="/catalogue"){
+                    return(
+                      <div  index={4}>
+                        <Catalogue/>
+                      </div>
+                      )
+                    }
   }
   return(
       <>

@@ -22,6 +22,12 @@ import notice from './assets/images/notice.png';
 import catalogue from './assets/images/catalogue.png';
 import prRoom from './assets/images/prRoom.png';
 import recruit from './assets/images/recruit.jpg';
+import noticebanner from './assets/images/noticebanner.jpg';
+import search from './assets/images/search.jpg';
+import book_icon from './assets/images/book_icon.jpg';
+import prRoomBanner from './assets/images/prRoomBanner.jpg';
+import inquirybanner from './assets/images/inquirybanner.jpg';
+import catalogueBanner from './assets/images/catalogueBanner.jpg';
 
 const images ={
    'flag2':<img src={flag2}  alt="us" />,
@@ -47,6 +53,12 @@ const images ={
    'catalogue':<img className="" src={catalogue}  alt="catalogue" />,
    'prRoom':<img className="" src={prRoom}  alt="prRoom" />,
    'recruit':<img className="" src={recruit}  alt="recruit" />,
+   'noticebanner':<img className="" src={noticebanner}  alt="noticebanner" />,
+   'search':<img className="" src={search}  alt="search" />,
+   'book_icon':<img className="" src={book_icon}  alt="book_icon" />,
+   'prRoomBanner':<img className="" src={prRoomBanner}  alt="prRoomBanner" />,
+   'inquirybanner':<img className="" src={inquirybanner}  alt="inquirybanner" />,
+   'catalogueBanner':<img className="" src={catalogueBanner}  alt="catalogueBanner" />,
 }
 function Imgfunction(img) {
 // const [imgData, setimgData]=useState(img);

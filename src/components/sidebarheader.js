@@ -98,23 +98,23 @@ import Imgfunction from "../common/images";
             case '/msds':
                 return(
                     <>
-                <h1>{list[3].sidebarName || value.sidebarName}</h1>
-                    <div className="">{Imgfunction( `${list[3].icon}`||`${value.icon}`)}</div>
-                    <p>{list[3].sideContent || value.sideContent}</p>
+                <h1>{list[2].sidebarName || value.sidebarName}</h1>
+                    <div className="">{Imgfunction( `${list[2].icon}`||`${value.icon}`)}</div>
+                    <p>{list[2].sideContent || value.sideContent}</p>
                 </>
                 );
                 case '/promotioncenter':
                return(<>
-                <h1>{list[4].sidebarName || value.sidebarName}</h1>
-                    <div className="">{Imgfunction( `${list[4].icon}`||`${value.icon}`)}</div>
-                    <p>{list[4].sideContent || value.sideContent}</p>
+                <h1>{list[3].sidebarName || value.sidebarName}</h1>
+                    <div className="">{Imgfunction( `${list[3].icon}`||`${value.icon}`)}</div>
+                    <p>{list[3].sideContent || value.sideContent}</p>
                 </>);
             case '/inquiry':
                 return(
                     <>
-                <h1>{list[5].sidebarName || value.sidebarName}</h1>
-                    <div className="">{Imgfunction( `${list[5].icon}`||`${value.icon}`)}</div>
-                    <p>{list[5].sideContent || value.sideContent}</p>
+                <h1>{list[4].sidebarName || value.sidebarName}</h1>
+                    <div className="">{Imgfunction( `${list[4].icon}`||`${value.icon}`)}</div>
+                    <p>{list[4].sideContent || value.sideContent}</p>
                 </>
                 );
                 default:
