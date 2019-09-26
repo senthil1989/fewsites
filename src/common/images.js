@@ -28,6 +28,9 @@ import book_icon from './assets/images/book_icon.jpg';
 import prRoomBanner from './assets/images/prRoomBanner.jpg';
 import inquirybanner from './assets/images/inquirybanner.jpg';
 import catalogueBanner from './assets/images/catalogueBanner.jpg';
+import cheSub1 from './assets/images/cheSub1.jpg';
+import cheSub2 from './assets/images/cheSub2.jpg';
+import b_arrow from './assets/images/b_arrow.png';
 
 const images ={
    'flag2':<img src={flag2}  alt="us" />,
@@ -59,6 +62,10 @@ const images ={
    'prRoomBanner':<img className="" src={prRoomBanner}  alt="prRoomBanner" />,
    'inquirybanner':<img className="" src={inquirybanner}  alt="inquirybanner" />,
    'catalogueBanner':<img className="" src={catalogueBanner}  alt="catalogueBanner" />,
+
+   'cheSub1':<img className="" src={cheSub1}  alt="cheSub1" />,
+   'cheSub2':<img className="" src={cheSub2}  alt="cheSub2" />,
+   'b_arrow':<img className="btnarrow" src={b_arrow}  alt="b_arrow" />,
 }
 function Imgfunction(img) {
 // const [imgData, setimgData]=useState(img);

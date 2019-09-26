@@ -93,7 +93,7 @@ function TemporaryDrawer({handleChange}) {
             {
               id: "gases",
               sname: `${t("Gases")}`,
-              url: "/gases",
+              url: "/gases/Si₂H₆",
               sidebarName: "Gases",
               sideContent: "MessagefromCEO",
               icon: "vector_1"
@@ -101,7 +101,7 @@ function TemporaryDrawer({handleChange}) {
             {
               id: "chemical",
               sname: `${t("Chemical")}`,
-              url: "/chemical",
+              url: "/chemical/H₃PO₄",
               sidebarName: "Chemical",
               sideContent: "MessagefromCEO",
               icon: "vector_2"
@@ -109,7 +109,7 @@ function TemporaryDrawer({handleChange}) {
             {
               id: "gasket",
               sname: `${t("Gasket")}`,
-              url: "/gasket",
+              url: "/gasket/Flex/DX/EX+Localized-Gasket-Parts",
               sidebarName: "Gasket",
               sideContent: "MessagefromCEO",
               icon: "vector_3"
@@ -117,7 +117,7 @@ function TemporaryDrawer({handleChange}) {
             {
               id: "bead",
               sname: `${t("BEAD")}`,
-              url: "/bead",
+              url: "/bead/RF-Series",
               sidebarName: "Bead",
               sideContent: "MessagefromCEO",
               icon: "vector_4"
@@ -125,7 +125,7 @@ function TemporaryDrawer({handleChange}) {
             {
               id: "fdt",
               sname: `${t("FDT")}`,
-              url: "/fdt",
+              url: "/fdt/NOVEC-1230-Manual-fire-extinguisher",
               sidebarName: "FDT",
               sideContent: "MessagefromCEO",
               icon: "vector_5"
@@ -133,7 +133,7 @@ function TemporaryDrawer({handleChange}) {
             {
               id: "shuttervalve",
               sname: `${t("ShutterValve")}`,
-              url: "/shuttervalve",
+              url: "/shuttervalve/AVS-50",
               sidebarName: "ShutterValve",
               sideContent: "MessagefromCEO",
               icon: "shutter"

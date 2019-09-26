@@ -17,6 +17,13 @@ function App(props) {
         <Switch>
         <Route exact  path='/' component={CoverIndex} />
         { Routes.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
+        { Routes[3].submenu.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
+        { Routes[4].submenu.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
+        { Routes[5].submenu.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
+        { Routes[6].submenu.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
+        { Routes[7].submenu.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
+        { Routes[8].submenu.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
+      
         <Route path='/sekar' component={Sekar} />
         <Route component={Notfound} />
         </Switch>

@@ -10,6 +10,15 @@ import MsdsTable from './msds.js';
 import PromotionCenter from './promotioncenter';
 import InquiryForm from './inquiryform';
 import Catalogue from './catalogue';
+import GasComponentone from './gassub1';
+import GasComponenttwo from './gassub2';
+import GasComponentthree from './gassub3';
+import GasComponentfour from './gassub4';
+import GasComponentfive from './gassub5';
+import ChemicalComponentone from './chemicalsub1';
+import ChemicalComponenttwo from './chemicalsub2';
+import ChemicalComponentthree from './chemicalsub3';
+
 
 // function a11yProps(index) {
 //   return {
@@ -82,11 +91,67 @@ function RightContent(props){
                   }
                   else if(match.url ==="/catalogue"){
                     return(
-                      <div  index={4}>
+                      <div  index={5}>
                         <Catalogue/>
                       </div>
                       )
                     }
+                    else if(match.url ==="/gases/Si₂H₆"){
+                      return(
+                        <div  index={6}>
+                          <GasComponentone/>
+                        </div>
+                        )
+                      }
+                      else if(match.url ==="/gases/GeH₄"){
+                        return(
+                          <div  index={7}>
+                            <GasComponenttwo/>
+                          </div>
+                          )
+                        }
+                        else if(match.url ==="/gases/C₃H₆"){
+                          return(
+                            <div  index={6}>
+                              <GasComponentthree/>
+                            </div>
+                            )
+                          }
+                          else if(match.url ==="/gases/C₄F₆"){
+                            return(
+                              <div  index={7}>
+                                <GasComponentfour/>
+                              </div>
+                              )
+                            }
+                            else if(match.url ==="/gases/C₃F₈"){
+                              return(
+                                <div  index={7}>
+                                  <GasComponentfive/>
+                                </div>
+                                )
+                              }
+                              else if(match.url ==="/chemical/H₃PO₄"){
+                                return(
+                                  <div  index={7}>
+                                    <ChemicalComponentone/>
+                                  </div>
+                                  )
+                                }
+                                else if(match.url ==="/chemical/HF"){
+                                  return(
+                                    <div  index={7}>
+                                      <ChemicalComponenttwo/>
+                                    </div>
+                                    )
+                                  }
+                                  else if(match.url ==="/chemical/Anti-rust-coating"){
+                                    return(
+                                      <div  index={7}>
+                                        <ChemicalComponentthree/>
+                                      </div>
+                                      )
+                                    }
   }
   return(
       <>

@@ -2,26 +2,24 @@ import React from "react";
 // import {connect} from 'react-redux';
 // import {handleClick} from '../actions/header';
 import "../styles/drawer.scss";
-import {connect} from 'react-redux';
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import {handleChange} from '../actions/header';
-import SidebarHeader from './sidebarheader';
+import { handleChange } from "../actions/header";
+import SidebarHeader from "./sidebarheader";
 import "../common/assets/css/styles.scss";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import Imgfunction from "../common/images";
 import { useTranslation } from "react-i18next";
 // import headerReducer from '../reducers/header';
 
 const useStyles = makeStyles({
-  list: {
-  }
+  list: {}
 });
 
 function SideBar(props) {
-    const{handleChange,value}=props;
+  const { handleChange, value } = props;
   const { t, i18n } = useTranslation();
   const classes = useStyles();
 
@@ -34,284 +32,207 @@ function SideBar(props) {
     var json = {
       About: [
         {
-          id:"message",
-          keyid:0,
+          id: "message",
+          keyid: 0,
           path: "/message",
           sidebarName: "MessagefromCEO",
           sideContent: "MessagefromCEO",
           icon: "greet"
         },
         {
-          id:"history",
-          keyid:1,
+          id: "history",
+          keyid: 1,
           path: "/history",
           sidebarName: "History",
           sideContent: "History",
           icon: "his"
         },
         {
-          id:"location",
-          keyid:2,
+          id: "location",
+          keyid: 2,
           path: "/location",
           sidebarName: "Location",
           sideContent: "Location",
-          icon: "loc",
+          icon: "loc"
         }
       ],
       Product: [
         {
-          id:"gases",
-          keyid:3,
+          id: "gases",
+          keyid: 3,
           path: "/gases",
           sidebarName: "Gases",
           sideContent: "MessagefromCEO",
           icon: "vector_1",
-          submenu:[
+          submenu: [
             {
-              id:"Si₂H₆",
-              keyid:4,
+              id: "Si₂H₆",
+              keyid: 4,
               path: "/gases/Si₂H₆",
-              sidebarName: "Si₂H₆",
+              sidebarName: "Si₂H₆"
             },
             {
-              id:"GeH₄",
-              keyid:4,
+              id: "GeH₄",
+              keyid: 5,
               path: "/gases/GeH₄",
-              sidebarName: "GeH₄",
+              sidebarName: "GeH₄"
             },
             {
-              id:"C₃H₆",
-              keyid:4,
+              id: "C₃H₆",
+              keyid: 6,
               path: "/gases/C₃H₆",
-              sidebarName: "C₃H₆",
+              sidebarName: "C₃H₆"
             },
             {
-              id:"C₄F₆",
-              keyid:4,
+              id: "C₄F₆",
+              keyid: 7,
               path: "/gases/C₄F₆",
-              sidebarName: "C₄F₆",
+              sidebarName: "C₄F₆"
             },
             {
-              id:"C₃F₈",
-              keyid:4,
+              id: "C₃F₈",
+              keyid: 8,
               path: "/gases/C₃F₈",
-              sidebarName: "C₃F₈",
-            },
-          ]          
+              sidebarName: "C₃F₈"
+            }
+          ]
         },
         {
-          id:"chemical",
-          keyid:4,
-          path: "/chemical",
+          id: "chemical",
+          keyid: 4,
+          path: "/chemical/H₃PO₄",
           sidebarName: "Chemical",
           sideContent: "MessagefromCEO",
           icon: "vector_2",
-          submenu:[
+          submenu: [
             {
-              id:"H₃PO₄",
-              keyid:4,
-              path: "/gases/H₃PO₄",
-              sidebarName: "H₃PO₄",
+              id: "H₃PO₄",
+              keyid: 9,
+              path: "/chemical/H₃PO₄",
+              sidebarName: "H₃PO₄"
             },
             {
-              id:"HF",
-              keyid:4,
-              path: "/gases/HF",
-              sidebarName: "HF",
+              id: "HF",
+              keyid: 10,
+              path: "/chemical/HF",
+              sidebarName: "HF"
             },
             {
-              id:"C₃H₆",
-              keyid:4,
-              path: "/gases/C₃H₆",
-              sidebarName: "C₃H₆",
-            },
-            {
-              id:"C₄F₆",
-              keyid:4,
-              path: "/gases/C₄F₆",
-              sidebarName: "C₄F₆",
-            },
-            {
-              id:"C₃F₈",
-              keyid:4,
-              path: "/gases/C₃F₈",
-              sidebarName: "C₃F₈",
+              id: "Anti-rust coating",
+              keyid: 11,
+              path: "/chemical/Anti-rust-coating",
+              sidebarName: "Anti-rust coating"
             },
           ]
         },
         {
-          id:"gasket",
-          keyid:5,
-          path: "/gasket",
+          id: "gasket",
+          keyid: 5,
+          path: "/gasket/Flex/DX/EX+Localized-Gasket-Parts",
           sidebarName: "Gasket",
           sideContent: "MessagefromCEO",
           icon: "vector_3",
-          submenu:[
+          submenu: [
             {
-              id:"Si₂H₆",
-              keyid:4,
-              path: "/gases/Si₂H₆",
-              sidebarName: "Si₂H₆",
+              id: "Flex/DX/EX+ Localized Gasket Parts",
+              keyid: 12,
+              path: "/gasket/Flex/DX/EX+Localized-Gasket-Parts",
+              sidebarName: "Flex/DX/EX+ Localized Gasket Parts"
             },
-            {
-              id:"GeH₄",
-              keyid:4,
-              path: "/gases/GeH₄",
-              sidebarName: "GeH₄",
-            },
-            {
-              id:"C₃H₆",
-              keyid:4,
-              path: "/gases/C₃H₆",
-              sidebarName: "C₃H₆",
-            },
-            {
-              id:"C₄F₆",
-              keyid:4,
-              path: "/gases/C₄F₆",
-              sidebarName: "C₄F₆",
-            },
-            {
-              id:"C₃F₈",
-              keyid:4,
-              path: "/gases/C₃F₈",
-              sidebarName: "C₃F₈",
-            },
+            
           ]
         },
         {
-          id:"bead",
-          keyid:6,
-          path: "/bead",
+          id: "bead",
+          keyid: 6,
+          path: "/bead/RF-Series",
           sidebarName: "Bead",
           sideContent: "MessagefromCEO",
           icon: "vector_4",
-          submenu:[
+          submenu: [
             {
-              id:"Si₂H₆",
-              keyid:4,
-              path: "/gases/Si₂H₆",
-              sidebarName: "Si₂H₆",
+              id: "RF Series",
+              keyid: 13,
+              path: "/bead/RF-Series",
+              sidebarName: "RF Series"
             },
             {
-              id:"GeH₄",
-              keyid:4,
-              path: "/gases/GeH₄",
-              sidebarName: "GeH₄",
+              id: "FEsphere P Series",
+              keyid: 14,
+              path: "/bead/FEsphere-P-Series",
+              sidebarName: "FEsphere P Series"
             },
             {
-              id:"C₃H₆",
-              keyid:4,
-              path: "/gases/C₃H₆",
-              sidebarName: "C₃H₆",
+              id: "FEsphere SS, SD Series",
+              keyid: 15,
+              path: "/bead/FEsphere-SS",
+              sidebarName: "FEsphere SS, SD Series"
             },
             {
-              id:"C₄F₆",
-              keyid:4,
-              path: "/gases/C₄F₆",
-              sidebarName: "C₄F₆",
+              id: "Pigment Powder",
+              keyid: 16,
+              path: "/bead/Pigment-Powder",
+              sidebarName: "Pigment Powder"
             },
             {
-              id:"C₃F₈",
-              keyid:4,
-              path: "/gases/C₃F₈",
-              sidebarName: "C₃F₈",
-            },
+              id: "Coated Powders",
+              keyid:17,
+              path: "/bead/Coated-Powders",
+              sidebarName: "Coated Powders"
+            }
           ]
         },
         {
-          id:"fdt",
-          keyid:7,
-          path: "/fdt",
+          id: "fdt",
+          keyid: 7,
+          path: "/fdt/NOVEC-1230-Manual-fire-extinguisher",
           sidebarName: "FDT",
           sideContent: "MessagefromCEO",
           icon: "vector_5",
-          submenu:[
+          submenu: [
             {
-              id:"Si₂H₆",
-              keyid:4,
-              path: "/gases/Si₂H₆",
-              sidebarName: "Si₂H₆",
+              id: "NOVEC 1230 Manual fire extinguisher",
+              keyid: 18,
+              path: "/fdt/NOVEC-1230-Manual-fire-extinguisher",
+              sidebarName: "NOVEC 1230 Manual fire extinguisher"
             },
             {
-              id:"GeH₄",
-              keyid:4,
-              path: "/gases/GeH₄",
-              sidebarName: "GeH₄",
-            },
-            {
-              id:"C₃H₆",
-              keyid:4,
-              path: "/gases/C₃H₆",
-              sidebarName: "C₃H₆",
-            },
-            {
-              id:"C₄F₆",
-              keyid:4,
-              path: "/gases/C₄F₆",
-              sidebarName: "C₄F₆",
-            },
-            {
-              id:"C₃F₈",
-              keyid:4,
-              path: "/gases/C₃F₈",
-              sidebarName: "C₃F₈",
+              id: "NOVEC 1230 Automatic fire extinguisher",
+              keyid: 19,
+              path: "/fdt/NOVEC-1230-Automatic-fire-extinguisher",
+              sidebarName: "NOVEC 1230 Automatic fire extinguisher"
             },
           ]
         },
         {
-          id:"shuttervalve",
-          keyid:8,
-          path: "/shuttervalve",
+          id: "shuttervalve",
+          keyid: 8,
+          path: "/shuttervalve/AVS-50",
           sidebarName: "ShutterValve",
           sideContent: "MessagefromCEO",
           icon: "shutter",
-          submenu:[
+          submenu: [
             {
-              id:"Si₂H₆",
-              keyid:4,
-              path: "/gases/Si₂H₆",
-              sidebarName: "Si₂H₆",
-            },
-            {
-              id:"GeH₄",
-              keyid:4,
-              path: "/gases/GeH₄",
-              sidebarName: "GeH₄",
-            },
-            {
-              id:"C₃H₆",
-              keyid:4,
-              path: "/gases/C₃H₆",
-              sidebarName: "C₃H₆",
-            },
-            {
-              id:"C₄F₆",
-              keyid:4,
-              path: "/gases/C₄F₆",
-              sidebarName: "C₄F₆",
-            },
-            {
-              id:"C₃F₈",
-              keyid:4,
-              path: "/gases/C₃F₈",
-              sidebarName: "C₃F₈",
+              id: "AVS - 50",
+              keyid: 20,
+              path: "/shuttervalve/AVS-50",
+              sidebarName: "AVS - 50"
             },
           ]
         }
       ],
       Employment: [
         {
-          id:"employment",
-          keyid:9,
+          id: "employment",
+          keyid: 9,
           path: "/employment",
           sidebarName: "Employment",
           sideContent: "MessagefromCEO",
           icon: "recruitIcon"
         },
         {
-          id:"apply",
-          keyid:10,
+          id: "apply",
+          keyid: 10,
           path: "/apply",
           sidebarName: "Apply",
           sideContent: "MessagefromCEO",
@@ -320,40 +241,40 @@ function SideBar(props) {
       ],
       Inquiry: [
         {
-          id:"notice",
-          keyid:11,
+          id: "notice",
+          keyid: 11,
           path: "/notice",
           sidebarName: "Notice",
           sideContent: "MessagefromCEO",
           icon: "notice"
         },
         {
-          id:"catalogue",
-          keyid:12,
+          id: "catalogue",
+          keyid: 12,
           path: "/catalogue",
           sidebarName: "Catalogue",
           sideContent: "MessagefromCEO",
           icon: "catalogue"
         },
         {
-          id:"msds",
-          keyid:13,
+          id: "msds",
+          keyid: 13,
           path: "/msds",
           sidebarName: "MSDS",
           sideContent: "MessagefromCEO",
           icon: "catalogue"
         },
         {
-          id:"promotioncenter",
-          keyid:14,
+          id: "promotioncenter",
+          keyid: 14,
           path: "/promotioncenter",
           sidebarName: "PromotionCenter",
           sideContent: "MessagefromCEO",
           icon: "prRoom"
         },
         {
-          id:"inquiry",
-          keyid:15,
+          id: "inquiry",
+          keyid: 15,
           path: "/inquiry",
           sidebarName: "Inquiry",
           sideContent: "MessagefromCEO",
@@ -367,32 +288,125 @@ function SideBar(props) {
 
   const list = getItems();
 
-  function renderSubitems(){
-    const sublist = Object.keys(list.Product);
-    console.log(sublist)
-    return(
-      <>
-      {sublist.map((id)=>{ return (
-        list.Product[id].submenu.map((submenus, index) => {
-          return (
-            <Link to={submenus.path}>
-              <ListItem button key={submenus.sidebarName + "sub"} >
-                <ListItemText
-                  key={submenus.sidebarName}
-                  primary={submenus.sidebarName}
-                  onClick={()=>handleChange(submenus.id,submenus)}
-                />
-              </ListItem>
-            </Link>
-          );
-        })
-      )})
+  function renderSubitems(props) {
+    const { match } = props.content;
+    console.log(props);
+    if (match.url === "/gases/Si₂H₆" || match.url === '/gases/GeH₄' || match.url === '/gases/C₃H₆' || match.url ===  '/gases/C₄F₆' || match.url === '/gases/C₃F₈') {
+      console.log('gases')
+      return (
+        <>
+          {list.Product[0].submenu.map((submenus, index) => {
+            return (
+              <>
+              <Link to={submenus.path}>
+                <ListItem button key={submenus.sidebarName + "sub"}>
+                  <ListItemText
+                    key={submenus.sidebarName}
+                    primary={submenus.sidebarName}
+                    onClick={() => handleChange(submenus.id, submenus)}
+                  />
+                </ListItem>
+              </Link>
+              </>
+            );
+          })}
+        </>
+      );
+    } else if (match.url === "/chemical/H₃PO₄"  ||  match.url === '/chemical/HF' || match.url === '/chemical/Anti-rust-coating'  ) {
+      console.log(list.Product[3].submenu)
+      return (
+        <>
+          {list.Product[1].submenu.map((submenus, index) => {
+            return (
+              <Link to={submenus.path}>
+                <ListItem button key={submenus.sidebarName + "sub"}>
+                  <ListItemText
+                    key={submenus.sidebarName}
+                    primary={submenus.sidebarName}
+                    onClick={() => handleChange(submenus.id, submenus)}
+                  />
+                </ListItem>
+              </Link>
+            );
+          })}
+        </>
+      );
+    } else if ( match.url === "/gasket/Flex/DX/EX+Localized-Gasket-Parts" ) {
+      return (
+        <>
+          {list.Product[2].submenu.map((submenus, index) => {
+            return (
+              <Link to={submenus.path}>
+                <ListItem button key={submenus.sidebarName + "sub"}>
+                  <ListItemText
+                    key={submenus.sidebarName}
+                    primary={submenus.sidebarName}
+                    onClick={() => handleChange(submenus.id, submenus)}
+                  />
+                </ListItem>
+              </Link>
+            );
+          })}
+        </>
+      );
+    } else if (match.url === "/bead/RF-Series" || match.url === "/bead/FEsphere-P-Series" || match.url === "/bead/FEsphere-SS" || match.url === "/bead/Pigment-Powder" || match.url === "/bead/Coated-Powders" ) {
+      return (
+        <>
+          {list.Product[3].submenu.map((submenus, index) => {
+            return (
+              <Link to={submenus.path}>
+                <ListItem button key={submenus.sidebarName + "sub"}>
+                  <ListItemText
+                    key={submenus.sidebarName}
+                    primary={submenus.sidebarName}
+                    onClick={() => handleChange(submenus.id, submenus)}
+                  />
+                </ListItem>
+              </Link>
+            );
+          })}
+        </>
+      );
+    } else if ( match.url === "/fdt/NOVEC-1230-Manual-fire-extinguisher" || match.url === "/fdt/NOVEC-1230-Automatic-fire-extinguisher" ) {
+      return (
+        <>
+          {list.Product[4].submenu.map((submenus, index) => {
+            return (
+              <Link to={submenus.path}>
+                <ListItem button key={submenus.sidebarName + "sub"}>
+                  <ListItemText
+                    key={submenus.sidebarName}
+                    primary={submenus.sidebarName}
+                    onClick={() => handleChange(submenus.id, submenus)}
+                  />
+                </ListItem>
+              </Link>
+            );
+          })}
+        </>
+      );
+    } else if (match.url === "/shuttervalve/AVS-50") {
+      return (
+        <>
+          {list.Product[5].submenu.map((submenus, index) => {
+            return (
+              <Link to={submenus.path}>
+                <ListItem button key={submenus.sidebarName + "sub"}>
+                  <ListItemText
+                    key={submenus.sidebarName}
+                    primary={submenus.sidebarName}
+                    onClick={() => handleChange(submenus.id, submenus)}
+                  />
+                </ListItem>
+              </Link>
+            );
+          })}
+        </>
+      );
     }
-      </>
-    )
   }
   const sideList = props => {
-    const {match} = props.content;
+    const { match } = props.content;
     if (
       match.url === "/message" ||
       match.url === "/history" ||
@@ -401,17 +415,16 @@ function SideBar(props) {
       return (
         <div className="header-main">
           <div className={classes.list} role="presentation">
-          <SidebarHeader match={match} list={list.About}value={value} />
+            <SidebarHeader match={match} list={list.About} value={value} />
             <List>
               {list.About.map((submenus, index) => {
                 return (
                   <Link to={submenus.path}>
-                    <ListItem button key={submenus.sidebarName + "sub"} >
+                    <ListItem button key={submenus.sidebarName + "sub"}>
                       <ListItemText
                         key={submenus.sidebarName}
                         primary={submenus.sidebarName}
-                        
-                        onClick={()=>handleChange(submenus.id,submenus)}
+                        onClick={() => handleChange(submenus.id, submenus)}
                       />
                     </ListItem>
                   </Link>
@@ -421,41 +434,37 @@ function SideBar(props) {
           </div>
         </div>
       );
-    }
-   else if (
-      match.url === "/gases" ||
-      match.url === "/chemical" ||
-      match.url === "/gasket" ||
-      match.url === "/bead" ||
-      match.url === "/fdt" ||
-      match.url === "/shuttervalve"
+    } else if (
+      match.url === "/gases/Si₂H₆"  ||  match.url === '/gases/GeH₄' || match.url === '/gases/C₃H₆'  || match.url === '/gases/C₄F₆' ||  match.url === '/gases/C₃F₈'  ||
+      match.url === "/chemical/H₃PO₄"  ||  match.url === '/chemical/HF' || match.url === '/chemical/Anti-rust-coating'  ||
+      match.url === "/gasket/Flex/DX/EX+Localized-Gasket-Parts" ||
+      match.url === "/bead/RF-Series" || match.url === "/bead/FEsphere-P-Series" || match.url === "/bead/FEsphere-SS" || match.url === "/bead/Pigment-Powder" || match.url === "/bead/Coated-Powders" ||
+      match.url === "/fdt/NOVEC-1230-Manual-fire-extinguisher" || match.url === "/fdt/NOVEC-1230-Automatic-fire-extinguisher" ||
+      match.url === "/shuttervalve/AVS-50"
     ) {
+      console.log('bye');
       return (
         <div className="header-main">
           <div className={classes.list} role="presentation">
-          <SidebarHeader match={match} list={list.Product}value={value} />
-            <List>{renderSubitems(list)}</List>
+            <SidebarHeader match={match} list={list.Product} value={value} />
+            <List>{renderSubitems(props)}</List>
           </div>
         </div>
       );
-    }
-    else if (
-      match.url === "/employment" ||
-      match.url === "/apply"
-    ) {
+    } else if (match.url === "/employment" || match.url === "/apply") {
       return (
         <div className="header-main">
           <div className={classes.list} role="presentation">
-          <SidebarHeader match={match} list={list.Employment}value={value} />
+            <SidebarHeader match={match} list={list.Employment} value={value} />
             <List>
               {list.Employment.map((submenus, index) => {
                 return (
                   <Link to={submenus.path}>
-                    <ListItem button key={submenus.sidebarName + "sub"} >
+                    <ListItem button key={submenus.sidebarName + "sub"}>
                       <ListItemText
                         key={submenus.sidebarName}
                         primary={submenus.sidebarName}
-                        onClick={()=>handleChange(submenus.id,submenus)}
+                        onClick={() => handleChange(submenus.id, submenus)}
                       />
                     </ListItem>
                   </Link>
@@ -465,28 +474,27 @@ function SideBar(props) {
           </div>
         </div>
       );
-    }
-    else if (
+    } else if (
       match.url === "/notice" ||
       match.url === "/catalogue" ||
-      match.url === "/location"  ||
-      match.url === "/msds"  ||
-      match.url === "/promotioncenter"  ||
-      match.url === "/inquiry" 
+      match.url === "/location" ||
+      match.url === "/msds" ||
+      match.url === "/promotioncenter" ||
+      match.url === "/inquiry"
     ) {
       return (
         <div className="header-main">
           <div className={classes.list} role="presentation">
-          <SidebarHeader match={match} list={list.Inquiry}value={value} />
+            <SidebarHeader match={match} list={list.Inquiry} value={value} />
             <List>
               {list.Inquiry.map((submenus, index) => {
                 return (
                   <Link to={submenus.path}>
-                    <ListItem button key={submenus.sidebarName + "sub"} >
+                    <ListItem button key={submenus.sidebarName + "sub"}>
                       <ListItemText
                         key={submenus.sidebarName}
                         primary={submenus.sidebarName}
-                        onClick={()=>handleChange(submenus.id,submenus)}
+                        onClick={() => handleChange(submenus.id, submenus)}
                       />
                     </ListItem>
                   </Link>
@@ -505,22 +513,21 @@ function SideBar(props) {
   );
 }
 function mapStateToProps(state) {
-  
-    const {headerReducer}=state;
-    console.log(state)
-      return {value:headerReducer};
+  const { headerReducer } = state;
+  return { value: headerReducer };
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    // dispatching plain actions
+    handleChange: (id, submenus) => {
+      setTimeout(() => {
+        // Yay! Can invoke sync or async actions with `dispatch`
+        dispatch(handleChange(id, submenus));
+      }, 10);
     }
-  
-    const mapDispatchToProps = dispatch => {
-      return {
-        // dispatching plain actions
-        handleChange: (id,submenus) =>{setTimeout(() => {
-          // Yay! Can invoke sync or async actions with `dispatch`
-          dispatch(handleChange(id,submenus));
-        }, 10);},
-  
-      }
-    }
+  };
+};
 // function mapStateToProps(state) {
 //   console.log(state)
 //   return {exOpen:state.headerReducer};
@@ -531,4 +538,7 @@ function mapStateToProps(state) {
 //     handleClick: text => dispatch(handleClick(text))
 // })
 // export default  connect(mapStateToProps, mapDispatchToProps)(TemporaryDrawer)
-export default  connect(mapStateToProps, mapDispatchToProps)(SideBar);;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SideBar);
