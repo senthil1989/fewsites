@@ -18,7 +18,15 @@ import GasComponentfive from './gassub5';
 import ChemicalComponentone from './chemicalsub1';
 import ChemicalComponenttwo from './chemicalsub2';
 import ChemicalComponentthree from './chemicalsub3';
-
+import GasketComponent from './gasketsub';
+import ShutterComponent from './shuttersub';
+import FdtComponentone from './fdtsub1';
+import FdtComponenttwo from './fdtsub2';
+import BeadComponentone from './beadsub1';
+import BeadComponenttwo from './beadsub2';
+import BeadComponentthree from './beadsub3';
+import BeadComponentfour from './beadsub4';
+import BeadComponentfive from './beadsub5';
 
 // function a11yProps(index) {
 //   return {
@@ -152,6 +160,69 @@ function RightContent(props){
                                       </div>
                                       )
                                     }
+                                    else if(match.url ==="/gasket/Flex/DX/EX+Localized-Gasket-Parts"){
+                                      return(
+                                        <div  index={7}>
+                                          <GasketComponent/>
+                                        </div>
+                                        )
+                                      }
+                                      else if(match.url ==="/shuttervalve/AVS-50"){
+                                        return(
+                                          <div  index={7}>
+                                            <ShutterComponent/>
+                                          </div>
+                                          )
+                                        }
+                                        else if(match.url ==="/fdt/NOVEC-1230-Manual-fire-extinguisher"){
+                                          return(
+                                            <div  index={7}>
+                                              <FdtComponentone/>
+                                            </div>
+                                            )
+                                          }
+                                            else if(match.url ==="/fdt/NOVEC-1230-Automatic-fire-extinguisher"){
+                                              return(
+                                                <div  index={8}>
+                                                  <FdtComponenttwo/>
+                                                </div>
+                                                )
+                                              }
+                                              else if(match.url ==="/bead/RF-Series"){
+                                                return(
+                                                  <div  index={8}>
+                                                    <BeadComponentone/>
+                                                  </div>
+                                                  )
+                                                }
+                                                else if(match.url ==="/bead/FEsphere-P-Series"){
+                                                  return(
+                                                    <div  index={8}>
+                                                      <BeadComponenttwo/>
+                                                    </div>
+                                                    )
+                                                  }
+                                                  else if(match.url ==="/bead/FEsphere-SS"){
+                                                    return(
+                                                      <div  index={8}>
+                                                        <BeadComponentthree/>
+                                                      </div>
+                                                      )
+                                                    }
+                                                    else if(match.url ==="/bead/Pigment-Powder"){
+                                                      return(
+                                                        <div  index={8}>
+                                                          <BeadComponentfour/>
+                                                        </div>
+                                                        )
+                                                      }
+                                                      else if(match.url ==="/bead/Coated-Powders"){
+                                                        return(
+                                                          <div  index={8}>
+                                                            <BeadComponentfive/>
+                                                          </div>
+                                                          )
+                                                        }
   }
   return(
       <>

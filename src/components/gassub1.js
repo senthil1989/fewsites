@@ -2,16 +2,21 @@ import React from 'react';
 import CommonTitle from '../components/title';
 import GastextComponent from './gastextcomponent';
 
-const subcontent={
-    title:{head1:'Description',head2:'Application'},
-    para:{para1:"CAS No. 1590-87-0" ,para2:"Semiconductor Gas"} 
+const subcontent1={
+    title:{header:'Description'},
+    para:{para:"CAS No. 1590-87-0"} 
+}
+const subcontent2={
+    title:{header:'Application'},
+    para:{para:"Semiconductor Gas"} 
 }
 
 function GasComponentone(){
 return(
     <>
         <CommonTitle title={"Disilane - Si₂H₆"} />
-        <GastextComponent subcontent={subcontent} /> 
+        <GastextComponent subcontent={subcontent1} />
+        <GastextComponent subcontent={subcontent2} /> 
         <section class="vectable pane-vScroll">
                             <table class="table table-striped">
                                 <thead>

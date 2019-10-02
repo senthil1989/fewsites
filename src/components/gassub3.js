@@ -2,16 +2,21 @@ import React from 'react';
 import CommonTitle from '../components/title';
 import GastextComponent from './gastextcomponent';
 
-const subcontent={
-    title:{head1:'Description',head2:'Application'},
-    para:{para1:`Flammable Liquid, N.O.S.; 3(Fammable); UN 1993` ,para2:"General Industrial, Synthetic & Analytical chemistry"} 
+const subcontent1={
+    title:{header:'Description'},
+    para:{para:`Flammable Liquid, N.O.S.; 3(Fammable); UN 1993`} 
+}
+const subcontent2={
+    title:{header:'Application'},
+    para:{para:"General Industrial, Synthetic & Analytical chemistry"} 
 }
 
 function GasComponentthree(){
 return(
     <>
         <CommonTitle title={"Propylene Oxide Balance Blend - C₃H₆"} />
-        <GastextComponent subcontent={subcontent}/> 
+        <GastextComponent subcontent={subcontent1}/>
+        <GastextComponent subcontent={subcontent2}/> 
         <section class="vectable pane-vScroll">
                             <table class="table table-striped">
                                 <thead>

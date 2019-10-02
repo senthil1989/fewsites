@@ -3,13 +3,19 @@ import CommonTitle from '../components/title';
 import GastextComponent from './gastextcomponent';
 import Inquirybtn from './inquirybtn';
 import Imgfunction from "../common/images";
-const subcontent={
-    title:{head1:'Description',head2:'Application'},
-    para:{para1:"CAS No. 7664-39-2" ,para2:`Semiconductor Fabrication (Cleaning Process)
+
+const subcontent1={
+    title:{header:'Description'},
+    para:{para:"CAS No. 7664-38-2"} 
+}
+const subcontent2={
+    title:{header:'Application'},
+    para:{para:`Semiconductor Fabrication (Cleaning Process)
     Form : Liquid / Acid
     Effect : Cleaning Process in Semiconductor Processing
     Usage : Cleaning process in Semiconductor processing`} 
 }
+
 
 function ChemicalComponenttwo(){
 return(
@@ -17,7 +23,10 @@ return(
         <CommonTitle title={"Hydrofluoric Acid (HF))"} />
         <div className="chemicalsub">
         <span>{Imgfunction('cheSub2')}</span>
-        <GastextComponent subcontent={subcontent} /> </div>
+        <div>
+        <GastextComponent subcontent={subcontent1} /> 
+        <GastextComponent subcontent={subcontent2} /> 
+        </div></div>
         <Inquirybtn name={"Product inquiry"} img={Imgfunction('b_arrow')}/>
     </>
 )

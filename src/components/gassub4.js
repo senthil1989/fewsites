@@ -2,18 +2,23 @@ import React from 'react';
 import CommonTitle from '../components/title';
 import GastextComponent from './gastextcomponent';
 
-const subcontent={
-    title:{head1:'Description',head2:'Application'},
-    para:{para1:`Liquefied gas, Toxic, Flammable, N.O.S` ,para2:`HFB is used for critical dimension dielectric etch applications.
-    Higher SiO2 etch rates can be achieved with better selectivity.
-    HFB is a colorless, odorless, and flammable liquefied gas.`} 
+const subcontent1={
+  title:{header:'Description'},
+  para:{para:`Liquefied gas, Toxic, Flammable, N.O.S`} 
+}
+const subcontent2={
+  title:{header:'Application'},
+  para:{para:`HFB is used for critical dimension dielectric etch applications.
+  Higher SiO2 etch rates can be achieved with better selectivity.
+  HFB is a colorless, odorless, and flammable liquefied gas.`} 
 }
 
 function GasComponentfour(){
 return (
   <>
     <CommonTitle title={"1, 3 Hexalfluorobutadiene - C₄F₆"} />
-    <GastextComponent subcontent={subcontent} />
+    <GastextComponent subcontent={subcontent1} />
+    <GastextComponent subcontent={subcontent2} />
     <section class="vectable pane-vScroll">
       <table class="table table-striped">
         <thead>

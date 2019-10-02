@@ -2,26 +2,28 @@ import React from "react";
 import CommonTitle from "../components/title";
 import GastextComponent from "./gastextcomponent";
 
-const subcontent = {
-  title: { head1: "Description", head2: "Application" },
-  para: {
-    para1: `Halocarbon 218 (Perfluoropropane) (C3F8) is a colorless, nonflammable,
-    nontoxic gas which is relatively stable and has a faintly sweet odor.
-    Halocarbon 218 is shipped as a liquefied gas under its Own Vapour pressure
-    (100 psig @ 70˚F)); UN 1993`,
-    para2: `Halocarbon 218 is used for plasma etching. The chemical composition of Halocarbon
-    218 supplies a higher ratio of Fluorine to Carbon than any Of the other Halocarbon
-    gases supplied by Electronic Fluorocarbons LLC.When Halocarbon 218 is exposed to
-    the RF field generated in the etch process, a gas plasma is produced that will etch
-    Silicon Dioxide or Silicon Nitrite with exellent selectivity.`
-  }
-};
+const subcontent1={
+  title:{header:'Description'},
+  para:{para:`Halocarbon 218 (Perfluoropropane) (C3F8) is a colorless, nonflammable,
+  nontoxic gas which is relatively stable and has a faintly sweet odor.
+  Halocarbon 218 is shipped as a liquefied gas under its Own Vapour pressure
+  (100 psig @ 70˚F)); UN 1993`} 
+}
+const subcontent2={
+  title:{header:'Application'},
+  para:{para:`Halocarbon 218 is used for plasma etching. The chemical composition of Halocarbon
+  218 supplies a higher ratio of Fluorine to Carbon than any Of the other Halocarbon
+  gases supplied by Electronic Fluorocarbons LLC.When Halocarbon 218 is exposed to
+  the RF field generated in the etch process, a gas plasma is produced that will etch
+  Silicon Dioxide or Silicon Nitrite with exellent selectivity.`} 
+}
 
 function GasComponentfive() {
   return (
     <>
       <CommonTitle title={"Perfluoropropane - Octafluoropropane - C₃F₈"} />
-      <GastextComponent subcontent={subcontent} />
+      <GastextComponent subcontent={subcontent1} />
+      <GastextComponent subcontent={subcontent2} />
       <section class="vectable pane-vScroll">
         <table class="table table-striped">
           <thead>
