@@ -5,11 +5,12 @@ const headerState={
     value:'',
     sidebarName: "",
     sideContent: "",
-    icon: ""
+    icon: "",
+    indexes:0,
 }
 
 export const headerReducer =(state=headerState, action)=>{
-    const{type ,menu,newValue} =action
+    const{type ,menu,newValue,index} =action
     // eslint-disable-next-line default-case
     switch(type){
                 case TABS:
@@ -17,7 +18,8 @@ export const headerReducer =(state=headerState, action)=>{
                         hnewState.value=newValue;
                         hnewState.icon=menu.icon;
                         hnewState.sideContent=menu.sideContent;
-                        hnewState.sidebarName=menu.sidebarName
+                        hnewState.sidebarName=menu.sidebarName;
+                        hnewState.indexes=index;
                     return hnewState;
             default:
                 return 0;

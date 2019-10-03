@@ -2,6 +2,7 @@ import React from 'react';
 // import Submenu from './sidemenu';
 import MessageCeo from './messageceo';
 import HistoryCeo from './history';
+import LocationCeo from './locations';
 import SideBar from './sidebar';
 import ApplyForm from './apply.js'
 import Employment from './employment.js';
@@ -55,6 +56,13 @@ function RightContent(props){
         </div>
         )
       }
+      else if(match.url ==="/location"){
+        return(
+          <div  index={1}>
+            <LocationCeo/>
+          </div>
+          )
+        }
       else if(match.url ==="/apply"){
         return(
           <div  index={2}>

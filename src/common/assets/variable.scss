@@ -1,8 +1,23 @@
+@import './varfonts.scss';
+
 $font-stack:    Helvetica, sans-serif;
+$sidebar-title-color:#ffffff;
 $font-primary-color: #363636;
+$font-secondary-color:#7d7d7d;
 $menu-hover-color: rgb(195, 13, 35);
 $menu-color: #333333;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 $sidebar-background:#eeeeee;
 $formborder:#d7d7d7;
+$font-NotoRegular: NotoSansCJKkr-Regular;
+$font-NotoThin: NotoSansCJKkr-Thin;
+$font-NotoRegular: NotoSansCJKkr-Regular;
+$font-NotoMedium: NotoSansCJKkr-Medium;
+$font-NotoLight: NotoSansCJKkr-Light;
+
+$right-title:35px;
+$right-subtitle:18px;
+$sidebar-title-size:24px;
+$sidebar-list-size: 16px;
+

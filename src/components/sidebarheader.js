@@ -26,7 +26,7 @@ const SidebarHeader = props => {
             <p>{list[1].sideContent || value.sideContent}</p>
           </>
         );
-      case "/location ":
+      case "/location":
         return (
           <>
             <h1>{list[2].sidebarName || value.sidebarName}</h1>

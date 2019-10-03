@@ -8,7 +8,7 @@ export const Routes = [
     {
       path: '/history',
       sidebarName: 'History',
-      sideContent: 'History',
+      sideContent: '',
       icon: 'his',
     },
     {

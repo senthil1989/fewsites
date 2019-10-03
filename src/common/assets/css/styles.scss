@@ -22,6 +22,13 @@
   }
   h1 {
     position: absolute;
+    font-family: $font-NotoRegular;
+    color: $sidebar-title-color;
+    font-size: $sidebar-title-size;
+    top: 97px;
+    left:19px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
   }
   p {
     position: absolute;

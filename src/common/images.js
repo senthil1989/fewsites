@@ -92,6 +92,10 @@ import pigment8 from './assets/images/pigment8.jpg';
 import coat1 from './assets/images/coat1.jpg';
 import coat2 from './assets/images/coat2.jpg';
 
+import location1 from './assets/images/location1.jpg';
+import map1 from './assets/images/map1.jpg';
+import map2 from './assets/images/map2.jpg';
+
 
 const images ={
    'flag2':<img src={flag2}  alt="us" />,
@@ -187,6 +191,9 @@ const images ={
    'pigment8': <img data-u="image" src={pigment8} alt="pigment8" />,
    'coat1': <img data-u="image" src={coat1} alt="coat1" />,
    'coat2': <img data-u="image" src={coat2} alt="coat2" />,
+   'map1': <img data-u="image" src={map1} alt="map1" />,
+   'map2': <img data-u="image" src={map2} alt="map2" />,
+   'location1': <img data-u="image" src={location1} alt="location1" />,
 
 }
 function Imgfunction(img) {

@@ -1,9 +1,11 @@
 export const TABS = 'TABS';
-export  const handleChange=(newValue,menu)=> {
+export  const handleChange=(newValue,menu,indexes)=> {
+    console.log(newValue)
         return(
             {type:TABS,
             newValue,
-            menu
+            menu,
+            indexes
             }
         )
 }

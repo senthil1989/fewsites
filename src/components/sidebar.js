@@ -35,24 +35,24 @@ function SideBar(props) {
           id: "message",
           keyid: 0,
           path: "/message",
-          sidebarName: "MessagefromCEO",
-          sideContent: "MessagefromCEO",
+          sidebarName: `${t('MessagefromCEO')}`,
+          sideContent: "",
           icon: "greet"
         },
         {
           id: "history",
           keyid: 1,
           path: "/history",
-          sidebarName: "History",
-          sideContent: "History",
+          sidebarName:  `${t('History')}`,
+          sideContent: "",
           icon: "his"
         },
         {
           id: "location",
           keyid: 2,
           path: "/location",
-          sidebarName: "Location",
-          sideContent: "Location",
+          sidebarName:  `${t('Location')}`,
+          sideContent: "",
           icon: "loc"
         }
       ],
@@ -299,11 +299,11 @@ function SideBar(props) {
             return (
               <>
               <Link to={submenus.path}>
-                <ListItem button key={submenus.sidebarName + "sub"}>
+                <ListItem button key={submenus.sidebarName + "sub"} selected={value.value === index}>
                   <ListItemText
                     key={submenus.sidebarName}
                     primary={submenus.sidebarName}
-                    onClick={() => handleChange(submenus.id, submenus)}
+                    onClick={() => handleChange(index, submenus)}
                   />
                 </ListItem>
               </Link>
@@ -319,11 +319,11 @@ function SideBar(props) {
           {list.Product[1].submenu.map((submenus, index) => {
             return (
               <Link to={submenus.path}>
-                <ListItem button key={submenus.sidebarName + "sub"}>
+                <ListItem button key={submenus.sidebarName + "sub"} selected={value.value === index}>
                   <ListItemText
                     key={submenus.sidebarName}
                     primary={submenus.sidebarName}
-                    onClick={() => handleChange(submenus.id, submenus)}
+                    onClick={() => handleChange(index, submenus)}
                   />
                 </ListItem>
               </Link>
@@ -337,11 +337,11 @@ function SideBar(props) {
           {list.Product[2].submenu.map((submenus, index) => {
             return (
               <Link to={submenus.path}>
-                <ListItem button key={submenus.sidebarName + "sub"}>
+                <ListItem button key={submenus.sidebarName + "sub"} selected={value.value === index}>
                   <ListItemText
                     key={submenus.sidebarName}
                     primary={submenus.sidebarName}
-                    onClick={() => handleChange(submenus.id, submenus)}
+                    onClick={() => handleChange(index, submenus)}
                   />
                 </ListItem>
               </Link>
@@ -355,11 +355,11 @@ function SideBar(props) {
           {list.Product[3].submenu.map((submenus, index) => {
             return (
               <Link to={submenus.path}>
-                <ListItem button key={submenus.sidebarName + "sub"}>
+                <ListItem button key={submenus.sidebarName + "sub"} selected={value.value === index}>
                   <ListItemText
                     key={submenus.sidebarName}
                     primary={submenus.sidebarName}
-                    onClick={() => handleChange(submenus.id, submenus)}
+                    onClick={() => handleChange(index, submenus)}
                   />
                 </ListItem>
               </Link>
@@ -373,11 +373,11 @@ function SideBar(props) {
           {list.Product[4].submenu.map((submenus, index) => {
             return (
               <Link to={submenus.path}>
-                <ListItem button key={submenus.sidebarName + "sub"}>
+                <ListItem button key={submenus.sidebarName + "sub"} selected={value.value === index} >
                   <ListItemText
                     key={submenus.sidebarName}
                     primary={submenus.sidebarName}
-                    onClick={() => handleChange(submenus.id, submenus)}
+                    onClick={() => handleChange(submenus.id, submenus,index)}
                   />
                 </ListItem>
               </Link>
@@ -391,11 +391,11 @@ function SideBar(props) {
           {list.Product[5].submenu.map((submenus, index) => {
             return (
               <Link to={submenus.path}>
-                <ListItem button key={submenus.sidebarName + "sub"}>
+                <ListItem button key={submenus.sidebarName + "sub"} selected={value.value === index}>
                   <ListItemText
                     key={submenus.sidebarName}
                     primary={submenus.sidebarName}
-                    onClick={() => handleChange(submenus.id, submenus)}
+                    onClick={() => handleChange(index, submenus)}
                   />
                 </ListItem>
               </Link>
@@ -420,11 +420,11 @@ function SideBar(props) {
               {list.About.map((submenus, index) => {
                 return (
                   <Link to={submenus.path}>
-                    <ListItem button key={submenus.sidebarName + "sub"}>
+                    <ListItem button key={submenus.sidebarName + "sub"} selected={value.value === index}>
                       <ListItemText
                         key={submenus.sidebarName}
                         primary={submenus.sidebarName}
-                        onClick={() => handleChange(submenus.id, submenus)}
+                        onClick={() => handleChange(index, submenus)}
                       />
                     </ListItem>
                   </Link>
@@ -460,11 +460,11 @@ function SideBar(props) {
               {list.Employment.map((submenus, index) => {
                 return (
                   <Link to={submenus.path}>
-                    <ListItem button key={submenus.sidebarName + "sub"}>
+                    <ListItem button key={submenus.sidebarName + "sub"} selected={value.value === index}>
                       <ListItemText
                         key={submenus.sidebarName}
                         primary={submenus.sidebarName}
-                        onClick={() => handleChange(submenus.id, submenus)}
+                        onClick={() => handleChange(index, submenus)}
                       />
                     </ListItem>
                   </Link>
@@ -490,11 +490,11 @@ function SideBar(props) {
               {list.Inquiry.map((submenus, index) => {
                 return (
                   <Link to={submenus.path}>
-                    <ListItem button key={submenus.sidebarName + "sub"}>
+                    <ListItem button key={submenus.sidebarName + "sub"} selected={value.value === index}>
                       <ListItemText
                         key={submenus.sidebarName}
                         primary={submenus.sidebarName}
-                        onClick={() => handleChange(submenus.id, submenus)}
+                        onClick={() => handleChange(index, submenus)}
                       />
                     </ListItem>
                   </Link>
@@ -514,6 +514,7 @@ function SideBar(props) {
 }
 function mapStateToProps(state) {
   const { headerReducer } = state;
+  console.log(headerReducer);
   return { value: headerReducer };
 }
 
