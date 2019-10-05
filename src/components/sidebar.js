@@ -14,9 +14,24 @@ import ListItemText from "@material-ui/core/ListItemText";
 import { useTranslation } from "react-i18next";
 // import headerReducer from '../reducers/header';
 
-const useStyles = makeStyles({
-  list: {}
-});
+const useStyles = makeStyles(theme => ({
+  list: {
+    '&$selected': {
+      backgroundColor:
+        theme.palette.type === 'light'
+          ? 'rgba(255, 255, 255, 1)' // grey[100]
+          : 'rgba(255, 255, 255, 1)',
+      '&$hover:hover': {
+      backgroundColor:"white",
+    },
+    },
+    
+
+  },
+  selected: { },
+  hover:{},
+  primary:{color:'#7d7d7d',}
+}));
 
 function SideBar(props) {
   const { handleChange, value } = props;
@@ -290,9 +305,8 @@ function SideBar(props) {
 
   function renderSubitems(props) {
     const { match } = props.content;
-    console.log(props);
     if (match.url === "/gases/Si₂H₆" || match.url === '/gases/GeH₄' || match.url === '/gases/C₃H₆' || match.url ===  '/gases/C₄F₆' || match.url === '/gases/C₃F₈') {
-      console.log('gases')
+
       return (
         <>
           {list.Product[0].submenu.map((submenus, index) => {
@@ -313,7 +327,6 @@ function SideBar(props) {
         </>
       );
     } else if (match.url === "/chemical/H₃PO₄"  ||  match.url === '/chemical/HF' || match.url === '/chemical/Anti-rust-coating'  ) {
-      console.log(list.Product[3].submenu)
       return (
         <>
           {list.Product[1].submenu.map((submenus, index) => {
@@ -420,8 +433,9 @@ function SideBar(props) {
               {list.About.map((submenus, index) => {
                 return (
                   <Link to={submenus.path}>
-                    <ListItem button key={submenus.sidebarName + "sub"} selected={value.value === index}>
-                      <ListItemText
+                    <ListItem button key={submenus.sidebarName + "sub"} selected={value.value === index} classes={{root:classes.list, selected: classes.selected, hover: classes.hover}}>
+                      <ListItemText 
+                        className={{root:classes.primary}}
                         key={submenus.sidebarName}
                         primary={submenus.sidebarName}
                         onClick={() => handleChange(index, submenus)}
@@ -442,7 +456,6 @@ function SideBar(props) {
       match.url === "/fdt/NOVEC-1230-Manual-fire-extinguisher" || match.url === "/fdt/NOVEC-1230-Automatic-fire-extinguisher" ||
       match.url === "/shuttervalve/AVS-50"
     ) {
-      console.log('bye');
       return (
         <div className="header-main">
           <div className={classes.list} role="presentation">

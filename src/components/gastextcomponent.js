@@ -1,7 +1,6 @@
 import React from "react";
 
 const GastextComponent = ({subcontent}) => {
-    console.log(subcontent)
     const {title,para}=subcontent
 function rendertext(){
   if(title.header !== '' && para.para !== ''){

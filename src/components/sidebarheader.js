@@ -1,9 +1,7 @@
 import React from "react";
 import Imgfunction from "../common/images";
 const SidebarHeader = props => {
-  console.log(props);
   const { value, list, match } = props;
-  console.log(list);
   const rendersidebarheader = () => {
     switch (match.url) {
       case "/message":

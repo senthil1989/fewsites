@@ -38,8 +38,8 @@ import BeadComponentfive from './beadsub5';
 
 function RightContent(props){
   const {match}=props
-  // const classes = useStyles();
   console.log(props)
+  // const classes = useStyles();
   const renderContent=(props)=>{
    
     if(match.url ==="/message"){

@@ -275,7 +275,6 @@ function TemporaryDrawer({handleChange}) {
   
 }
 function mapStateToProps(state) {
-   console.log(state)
    const {value}=state.headerReducer;
      return {value:value};
    }

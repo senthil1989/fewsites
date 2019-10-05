@@ -5,7 +5,6 @@ import {Routes} from '../components/routelist';
 
 
 function RightContainer(props){
-  console.log(props)
   return(
     <Container maxWidth="lg">
     <div className="s-container">

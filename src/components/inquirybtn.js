@@ -8,7 +8,6 @@ const Inquirybtn=({name,img})=>{
         )
     }
     else {
-        console.log("product");
     return (
         <button className="inquirybtn">{name}{img}</button>
     )

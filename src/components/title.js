@@ -6,7 +6,7 @@ const CommonTitle= ({title})=>{
     const {t} =useTranslation();
     return(
         <>
-            <div>
+            <div className="title-text">
                 <span>{Imgfunction('redicon')}</span>
                 <h1>{t(`${title}`)}</h1>
             </div>

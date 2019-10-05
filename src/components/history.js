@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 import Imgfunction from "../common/images";
 import CommonTitle from "../components/title";
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -47,6 +48,8 @@ const marks = [
 ];
 
 function HistoryCeo() {
+  const { t, i18n } = useTranslation();
+  console.log(i18n.languages)
   const classes = useStyles();
   const [text1, setTextval1] = useState(false);
   const [text2, setTextval2] = useState(false);
@@ -64,28 +67,28 @@ function HistoryCeo() {
       setTextval5(false);
       setTextval6(false);
       return value ;
-    } else if (value > 70 && value < 80) {
+    } else if (value > 65 && value < 80) {
       setTextval1(false);
       setTextval2(true);
       setTextval3(false);
       setTextval4(false);
       setTextval5(false);
       setTextval6(false);
-    } else if (value > 60 && value < 70) {
+    } else if (value > 50 && value < 65) {
       setTextval1(false);
       setTextval2(false);
       setTextval3(true);
       setTextval4(false);
       setTextval5(false);
       setTextval6(false);
-    } else if (value > 40 && value < 60) {
+    } else if (value > 35 && value < 50) {
       setTextval1(false);
       setTextval2(false);
       setTextval3(false);
       setTextval4(true);
       setTextval5(false);
       setTextval6(false);
-    } else if (value > 20 && value < 40) {
+    } else if (value > 20 && value < 35) {
       setTextval1(false);
       setTextval2(false);
       setTextval3(false);
@@ -121,60 +124,50 @@ function HistoryCeo() {
         />
         <div class="vecHistory wView">
           <div class="hisLeft">
-            <div className={`L2018 ${text2 ? "text_active" : null}`}>
+            <div className={` ${i18n.languages[0] === 'en' ? 'L2018':'korL2018'} ${text2 ? "text_active" : null}`}>
               <h1>2018</h1>
-              <h5>April - Was INNO-BIZ certified.</h5>
-              <h5>February - Was ISO9001:2015 and ISO14001:2015 certified.</h5>
+              <h5>{t("Historypage", { context: "2018April" })}</h5>
+              <h5>{t("Historypage", { context: "2018February" })}</h5>
             </div>
-            <div className={`L2016 ${text4 ? "text_active" : null}`}>
+            <div className={`${i18n.languages[0] === 'en' ? 'L2016':'korL2016'} ${text4 ? "text_active" : null}`}>
               <h1>2016</h1>
               <h5>
-                October - Development of 10㎛ bead for reflective films was
-                completed.
+              {t("Historypage", { context: "2016October" })}
               </h5>
               <h5>
-                April - Development of 40㎛ bead for reflective films was
-                completed.
+              {t("Historypage", { context: "2016April" })}
               </h5>
-              <h5>February - The research center was established.</h5>
+              <h5>{t("Historypage", { context: "2016February" })}</h5>
             </div>
-            <div class={`L2014 ${text6 ? "text_active" : null}`}>
+            <div class={`${i18n.languages[0] === 'en' ? 'L2014':'korL2014'} ${text6 ? "text_active" : null}`}>
               <h1>2012</h1>
-              <h5>April - The corporate name was changed.</h5>
-              <h5>April - Registered a venture business.</h5>
+              <h5>{t("Historypage", { context: "2012April" })}</h5>
+              <h5>{t("Historypage", { context: "2012April1" })}</h5>
             </div>
           </div>
           <div class="hisRight">
-            <div class={`R2019 ${text1 ? "text_active" : null}`}>
+            <div class={`${i18n.languages[0] === 'en' ? 'R2019':'korR2019'} ${text1 ? "text_active" : null}`}>
               <h1>2019</h1>
               <h5>
-                April - Began construction of the 2nd place of business in
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jeungpyeong
-                (The 2nd Jeungpyeong Industrial Complex)
+              {t("Historypage", { context: "2019April" })}
               </h5>
               <h5>
-                March - Established high purity chemical analysis center for
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;semiconductors
+              {t("Historypage", { context: "2019March" })}
               </h5>
               <h5>
-                January - Registered a method of manufacturing optical bead.
+              {t("Historypage", { context: "2019January" })}
               </h5>
             </div>
-            <div class={`R2017 ${text3 ? "text_active" : null}`}>
+            <div class={`${i18n.languages[0] === 'en' ? 'R2017':'korR2017'} ${text3 ? "text_active" : null}`}>
               <h1>2017</h1>
               <h5>
-                February - The 1st place of business in Jeungppyeong
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(The
-                2nd Jeungpyeong Industrial Complex) was
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;completed.
+              {t("Historypage", { context: "2017February" })}
               </h5>
             </div>
-            <div class={`R2015 ${text5 ? "text_active" : null}`}>
+            <div class={`${i18n.languages[0] === 'en' ? 'R2015':'korR2015'} ${text5 ? "text_active" : null}`}>
               <h1>2014</h1>
-              <h5>October - 6N 10%GeH₄/H₂ was supplied to SK hynix Inc.</h5>
-              <h5>May - 4N8 Si₂H₆ was supplied to SK hynix Inc..</h5>
+              <h5>{t("Historypage", { context: "2014October" })}</h5>
+              <h5>{t("Historypage", { context: "2016May" })}</h5>
             </div>
           </div>
         </div>

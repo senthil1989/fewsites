@@ -191,9 +191,9 @@ const images ={
    'pigment8': <img data-u="image" src={pigment8} alt="pigment8" />,
    'coat1': <img data-u="image" src={coat1} alt="coat1" />,
    'coat2': <img data-u="image" src={coat2} alt="coat2" />,
-   'map1': <img data-u="image" src={map1} alt="map1" />,
-   'map2': <img data-u="image" src={map2} alt="map2" />,
-   'location1': <img data-u="image" src={location1} alt="location1" />,
+   'map1': <img data-u="image" className="map_bottom" src={map1} alt="map1" />,
+   'map2': <img data-u="image"  className="map_bottom" src={map2} alt="map2" />,
+   'location1': <img data-u="image"  className="map_bottom" src={location1} alt="location1" />,
 
 }
 function Imgfunction(img) {

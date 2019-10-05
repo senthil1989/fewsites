@@ -21,17 +21,23 @@
         MSDS: "MSDS",
         PromotionCenter: "Promotion Center",
         Inquiry: "Inquiry",
-        
-        Introduction: "Introduction",
-        "is an internationalization-framework which offers a complete solution to localize your product from web to mobile and desktop":
-          "is an internationalization-framework which offers a complete solution to localize your product from web to mobile and desktop",
-        "Plugins to detect the user language":
-          "Plugins to detect the user language",
-        "Plugins to load translations": "Plugins to load translations",
-        "Optionally cache the translations":
-          "Optionally cache the translations",
+        Historypage:"April - Was INNO-BIZ certified.",
+        "Historypage_2018April":"April - Was INNO-BIZ certified",
+        "Historypage_2018February":"February - Was ISO9001:2015 and ISO14001:2015 certified.",
+        "Historypage_2016April":"April - Development of 40㎛ bead for reflective films was completed.",
+        "Historypage_2016February":"February - The research center was established.",
+        "Historypage_2016October":" October - Development of 10㎛ bead for reflective films was completed.",
+        "Historypage_2012April":"April - The corporate name was changed.",
+        "Historypage_2012April1":"April - Registered a venture business.",
+        "Historypage_2019April":"April - Began construction of the 2nd place of business in Jeungpyeong (The 2nd Jeungpyeong Industrial Complex)",
+        "Historypage_2019March":"March - Established high purity chemical analysis center for semiconductors",
+        "Historypage_2019January":" January - Registered a method of manufacturing optical bead.",
+        "Historypage_2017February":"February - The 1st place of business in Jeungppyeong (The 2nd Jeungpyeong Industrial Complex) was completed.",
+        "Historypage_2014October":"October - 6N 10%GeH₄/H₂ was supplied to SK hynix Inc.",
+        "Historypage_2014May":"May - 4N8 Si₂H₆ was supplied to SK hynix Inc..",
+
         Advantages: "Advantages",
-        "Flexibility to use other packages": "Flexibility to use other packages"
+        "Flexibility to use other packages": { "dei":"ghghfh hghjgg hg hgh hghjgjhhjg h hj hj" }
       }
     },
     jap: {
@@ -55,13 +61,20 @@
         MSDS: "MSDS",
         PromotionCenter: "홍보자료실",
         Inquiry: "온라인문의",
-        Introduction: "前書き",
-        "is an internationalization-framework which offers a complete solution to localize your product from web to mobile and desktop":
-          "Webからモバイルとデスクトップに製品をローカライズするための完全なソリューションを提供する国際化フレームワークです",
-        "Plugins to detect the user language":
-          "ユーザー言語を検出するためのプラグイン",
-        "Plugins to load translations": "翻訳をロードするためのプラグイン",
-        "Optionally cache the translations": "必要に応じて翻訳をキャッシュする",
+        Historypage:"April - Was INNO-BIZ certified.",
+        "Historypage_2018April":"4 월 - 기술혁신형 중소기업(Inno-Biz) 인증",
+        "Historypage_2018February":"2 월 - ISO9001:2015, ISO14001:2015 인증",
+        "Historypage_2016April":"4월 - 40㎛ 반사필름용 Bead 개발완료",
+        "Historypage_2016February":"2월 - 기업부설연구소 설립",
+        "Historypage_2016October":" 10 월 - 10㎛ 반사필름용 Bead 개발완료",
+        "Historypage_2012April":"4월 - 주식회사 퓨엠으로 법인명 변경",
+        "Historypage_2012April1":"4월 - 벤처기업 등록",
+        "Historypage_2019April":"4월 - 증평2사업장(증평2일반산업단지) 착공",
+        "Historypage_2019March":"3월 - 반도체용 고순도 케미컬 분석센터 설립",
+        "Historypage_2019January":"1월 - 광학비드 제조방법 특허 등록",
+        "Historypage_2017February":"2월 - 증평1사업장(증평2일반산업단지) 준공",
+        "Historypage_2014October":"10 월 - 6N 10%GeH₄/H₂ SK하이닉스 공급",
+        "Historypage_2014May":"5 월 - 4N8 Si₂H₆ SK 하이닉스 공급",
         Advantages: "利点",
         "Flexibility to use other packages": "他のパッケージを使用する柔軟性"
       }
