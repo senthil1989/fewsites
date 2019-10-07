@@ -15,7 +15,7 @@ function App(props) {
     <Router>
         <Header/>
         <Switch>
-        <Route exact  path='/' component={CoverIndex} />
+        <Route exact  path='/fewsites' component={CoverIndex} />
         { Routes.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
         { Routes[3].submenu.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
         { Routes[4].submenu.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
