@@ -11,7 +11,7 @@ const MessageCeo = () => {
       return (
         <>
           <p className="message-sub-para">
-          The valuable company that shares value with the
+          Poda
             <span>employees, customers</span>, and society based on{" "}
             <span>trust</span>
           </p>
