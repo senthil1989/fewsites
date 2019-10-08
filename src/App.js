@@ -12,7 +12,7 @@ import { withTranslation } from 'react-i18next';
 
 function App(props) {
   return (
-    <Router basename="/fewsites">
+    <Router basename="{process.env.PUBLIC_URL}">
         <Header/>
         <Switch>
         <Route exact  path={process.env.PUBLIC_URL + '/'} component={CoverIndex} />
