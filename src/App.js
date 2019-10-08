@@ -12,10 +12,10 @@ import { withTranslation } from 'react-i18next';
 
 function App(props) {
   return (
-    <Router>
+    <Router basename="/">
         <Header/>
         <Switch>
-        <Route exact  path='/fewsites ' component={CoverIndex} />
+        <Route exact  path='/' component={CoverIndex} />
         { Routes.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
         { Routes[3].submenu.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
         { Routes[4].submenu.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
