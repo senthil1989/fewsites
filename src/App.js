@@ -15,7 +15,7 @@ function App(props) {
     <Router basename={process.env.PUBLIC_URL}>
         <Header/>
         <Switch>
-        <Route exact  path={process.env.PUBLIC_URL + '/'} component={CoverIndex} />
+        <Route exact path="/" component={CoverIndex} />
         { Routes.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
         { Routes[3].submenu.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
         { Routes[4].submenu.map((routes)=> {return <Route path={routes.path} component={RightContainer} />})}
