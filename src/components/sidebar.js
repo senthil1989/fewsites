@@ -242,7 +242,7 @@ function SideBar(props) {
           keyid: 9,
           path: "/employment",
           sidebarName: "Employment",
-          sideContent: "MessagefromCEO",
+          sideContent: "",
           icon: "recruitIcon"
         },
         {
@@ -250,7 +250,7 @@ function SideBar(props) {
           keyid: 10,
           path: "/apply",
           sidebarName: "Apply",
-          sideContent: "MessagefromCEO",
+          sideContent: "",
           icon: "recruitIcon"
         }
       ],
@@ -260,7 +260,7 @@ function SideBar(props) {
           keyid: 11,
           path: "/notice",
           sidebarName: "Notice",
-          sideContent: "MessagefromCEO",
+          sideContent: "",
           icon: "notice"
         },
         {
@@ -268,7 +268,7 @@ function SideBar(props) {
           keyid: 12,
           path: "/catalogue",
           sidebarName: "Catalogue",
-          sideContent: "MessagefromCEO",
+          sideContent: "",
           icon: "catalogue"
         },
         {
@@ -276,7 +276,7 @@ function SideBar(props) {
           keyid: 13,
           path: "/msds",
           sidebarName: "MSDS",
-          sideContent: "MessagefromCEO",
+          sideContent: "",
           icon: "catalogue"
         },
         {
@@ -284,7 +284,7 @@ function SideBar(props) {
           keyid: 14,
           path: "/promotioncenter",
           sidebarName: "PromotionCenter",
-          sideContent: "MessagefromCEO",
+          sideContent: "",
           icon: "prRoom"
         },
         {
@@ -292,7 +292,7 @@ function SideBar(props) {
           keyid: 15,
           path: "/inquiry",
           sidebarName: "Inquiry",
-          sideContent: "MessagefromCEO",
+          sideContent: "",
           icon: "recruitIcon"
         }
       ]
@@ -429,7 +429,7 @@ function SideBar(props) {
         <div className="header-main">
           <div className={classes.list} role="presentation">
             <SidebarHeader match={match} list={list.About} value={value} />
-            <List>
+            <List className="custom_tabs">
               {list.About.map((submenus, index) => {
                 return (
                   <Link to={submenus.path}>
@@ -460,7 +460,7 @@ function SideBar(props) {
         <div className="header-main">
           <div className={classes.list} role="presentation">
             <SidebarHeader match={match} list={list.Product} value={value} />
-            <List>{renderSubitems(props)}</List>
+            <List className="custom_tabs">{renderSubitems(props)}</List>
           </div>
         </div>
       );
@@ -469,7 +469,7 @@ function SideBar(props) {
         <div className="header-main">
           <div className={classes.list} role="presentation">
             <SidebarHeader match={match} list={list.Employment} value={value} />
-            <List>
+            <List className="custom_tabs">
               {list.Employment.map((submenus, index) => {
                 return (
                   <Link to={submenus.path}>
@@ -499,7 +499,7 @@ function SideBar(props) {
         <div className="header-main">
           <div className={classes.list} role="presentation">
             <SidebarHeader match={match} list={list.Inquiry} value={value} />
-            <List>
+            <List className="custom_tabs">
               {list.Inquiry.map((submenus, index) => {
                 return (
                   <Link to={submenus.path}>

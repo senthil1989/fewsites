@@ -87,13 +87,26 @@ function InquiryForm() {
       <div className="vertical-line">{Imgfunction('greetLine')}</div>
       <h1 className="canIhelp">Can I help you? </h1>
       <form className={classes.container} noValidate autoComplete="off">
+      <div className="formrow">
+          <div className="formlabel">
+            <span>Title</span>
+          </div>
+          <TextField
+            id="outlined-bare"
+            className={`${classes.textField} mobstyle`}
+            defaultValue="Bare"
+            margin="normal"
+            variant="outlined"
+            inputProps={{ "aria-label": "" }}
+          />
+        </div>
         <div className="formrow">
           <div className="formlabel">
             <span>Name</span>
           </div>
           <TextField
             id="outlined-bare"
-            className={classes.textField}
+            className={`${classes.textField} mobstyle`}
             defaultValue="Bare"
             margin="normal"
             variant="outlined"
@@ -104,27 +117,31 @@ function InquiryForm() {
           <div className="formlabel">
             <span>Contact</span>
           </div>
+          <div className="mobtextcontainer">
           <TextField
             id="outlined-bare"
-            className={classes.mobtextField}
+            className={`${classes.mobtextField} mobtextstyle`}
             margin="normal"
             variant="outlined"
             inputProps={{ "aria-label": "" }}
           />
           <TextField
             id="outlined-bare"
-            className={classes.mobtextField}
+            className={`${classes.mobtextField} mobtextstyle`}
             margin="normal"
             variant="outlined"
             inputProps={{ "aria-label": "bare" }}
           />
           <TextField
             id="outlined-bare"
-            className={classes.mobtextField}
+            className={`${classes.mobtextField} mobtextstyle`}
             margin="normal"
             variant="outlined"
             inputProps={{ "aria-label": "bare" }}
           />
+          </div>
+
+          
         </div>
         <div className="formrow">
           <div className="formlabel">
@@ -132,7 +149,7 @@ function InquiryForm() {
           </div>
           <TextField
             id="outlined-bare"
-            className={classes.textField}
+            className={`${classes.textField} mobstyle`}
             margin="normal"
             variant="outlined"
             inputProps={{ "aria-label": "bare" }}
@@ -143,7 +160,7 @@ function InquiryForm() {
             <span>Contents</span>
           </div>
           <TextareaAutosize
-            className={classes.textareaField}
+            className={`${classes.textareaField} mobstyle mobstextareaField`}
             aria-label="minimum height"
             rows={9}
             placeholder="Minimum 3 rows"
@@ -156,7 +173,7 @@ function InquiryForm() {
           </div>
           <input
             accept="image/*"
-            className={classes.chooseField}
+            className={`${classes.chooseField} mobstyle`}
             id="text-button-file"
             multiple
             type="file"
@@ -164,7 +181,7 @@ function InquiryForm() {
         </div>
 
         <div className="checkbtn">
-          <Button variant="contained" className={classes.button}>
+          <Button variant="contained" className={`${classes.button} mobstyle` }>
             {" "}
             SEND
           </Button>

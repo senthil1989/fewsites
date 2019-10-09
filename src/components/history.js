@@ -107,7 +107,7 @@ function HistoryCeo() {
   return (
     <React.Fragment>
       <div>
-        <CommonTitle title={"history"} />
+        <CommonTitle title={"History"} />
       </div>
       <div>
         <div>{Imgfunction("hisBanner")}</div>

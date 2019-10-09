@@ -65,7 +65,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("MessagefromCEO")}`,
               url: "/message",
               sidebarName: "MessagefromCEO",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "greet"
             },
             {
@@ -95,7 +95,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("Gases")}`,
               url: "/gases/Si₂H₆",
               sidebarName: "Gases",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "vector_1"
             },
             {
@@ -103,7 +103,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("Chemical")}`,
               url: "/chemical/H₃PO₄",
               sidebarName: "Chemical",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "vector_2"
             },
             {
@@ -111,7 +111,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("Gasket")}`,
               url: "/gasket/Flex/DX/EX+Localized-Gasket-Parts",
               sidebarName: "Gasket",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "vector_3"
             },
             {
@@ -119,7 +119,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("BEAD")}`,
               url: "/bead/RF-Series",
               sidebarName: "Bead",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "vector_4"
             },
             {
@@ -127,7 +127,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("FDT")}`,
               url: "/fdt/NOVEC-1230-Manual-fire-extinguisher",
               sidebarName: "FDT",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "vector_5"
             },
             {
@@ -135,7 +135,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("ShutterValve")}`,
               url: "/shuttervalve/AVS-50",
               sidebarName: "ShutterValve",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "shutter"
             }
           ]
@@ -149,7 +149,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("Employment")}`,
               url: "/employment",
               sidebarName: "Employment",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "recruitIcon"
             },
             {
@@ -157,7 +157,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("Apply")}`,
               url: "/apply",
               sidebarName: "Apply",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "recruitIcon"
             }
           ]
@@ -171,7 +171,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("Notice")}`,
               url: "/notice",
               sidebarName: "Notice",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "notice"
             },
             {
@@ -179,7 +179,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("Catalogue")}`,
               url: "/catalogue",
               sidebarName: "Catalogue",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "catalogue"
             },
             {
@@ -187,7 +187,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("MSDS")}`,
               url: "/msds",
               sidebarName: "MSDS",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "catalogue"
             },
             {
@@ -195,7 +195,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("PromotionCenter")}`,
               url: "/promotioncenter",
               sidebarName: "PromotionCenter",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "prRoom"
             },
             {
@@ -203,7 +203,7 @@ function TemporaryDrawer({handleChange}) {
               sname: `${t("Inquiry")}`,
               url: "/inquiry",
               sidebarName: "Inquiry",
-              sideContent: "MessagefromCEO",
+              sideContent: "",
               icon: "recruitIcon"
             }
           ]

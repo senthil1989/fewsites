@@ -1,9 +1,20 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Imgfunction from '../common/images';
 
-
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.paper,
+    display: 'flex',
+    height: 224,
+  },
+  tabs: {
+    borderRight: `1px solid ${theme.palette.divider}`,
+  },
+}));
 
 const renderTab=(props)=>{
   const{subcontent,value,handleChange,classes,a11yProps}=props
@@ -20,7 +31,7 @@ const renderTab=(props)=>{
     value={value}
     onChange={handleChange}
     aria-label="Vertical tabs example"
-    className={classes.tabs}
+    className="custom_tabs"
   >
         <Tab label="message" {...a11yProps(0)} />
         <Tab label="history" {...a11yProps(1)} />

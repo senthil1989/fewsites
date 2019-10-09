@@ -18,6 +18,9 @@
     justify-content: center;
     img {
       cursor: pointer;
+      @include mobile {
+        width:auto;
+       }
     }
   }
   h1 {
@@ -39,20 +42,41 @@
     font-size: $right-subtitle-p;
     width: 247px;
   }
+  .custom_tabs {
+    @include mobile {
+      display: flex;
+      overflow: scroll !important;
+      white-space: nowrap;
+  }
+}
+
 }
 .s-container {
   display: flex;
   flex: 1 1;
   width: 100%;
   flex-direction: row;
+  @include mobile {
+    flex-direction: column;
+  }
 
   .s-right-top {
     // border-left: 1px solid #ddd;
     max-width: 985px;
     margin: 70px auto 70px 374px;
+    @include mobile {
+      max-width: 100%;
+      margin:30px  0;
+    }
     .vertical-line {
       text-align: center;
       padding: 40px 0;
+      img{
+        @include mobile {
+          width:auto;
+        }
+      }
+     
     }
     .title-text{
       margin-bottom: 50px;
@@ -61,6 +85,9 @@
         font-family: $font-NotoMedium;
         font-size: $right-title;
         line-height: 0.9;
+        @include mobile {
+          font-size: $right-title-mob;
+        }
       }
     }
     .message-container{
@@ -102,6 +129,9 @@
     bottom: 0;
     top: 0;
     background: $sidebar-background;
+    @include mobile {
+      position: static;
+    }
   }
 }
 .MuiContainer-maxWidthLg {
@@ -127,11 +157,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include mobile {
+      width: 125px;
+    }
+  }
+  .mobtextcontainer{
+    display: flex;
+    @include mobile {
+      width: 100%;
+      margin-left: 10px;
+      padding-left: 1px;
+    }
+  }
+  .mobstyle{
+    @include mobile {
+      width: 100%;
+      margin-left: 10px;
+    font-size: 14px;
+    }
+    
+  }
+  .mobtextstyle{
+    @include mobile {
+      width: 61px;
+      margin-left: 0px;
+      margin-right: 6%;
+    }
+  }
+  .mobstextareaField{
+    @include mobile {
+      margin-right: 0;
+    }
   }
   span {
     padding: 20px 10px;
     align-items: center;
     justify-content: center;
+    @include mobile {
+      padding: 20px 1px;
+    }
   }
 }
 .MuiOutlinedInput-input {
@@ -155,6 +219,9 @@
   margin-top: 40px;
   .pane-vScroll {
     margin-top: 40px;
+    @include mobile {
+      overflow: scroll;
+    }
     table {
       border: 2px solid #e7e7e7;
       margin-bottom: 43px;
@@ -248,6 +315,10 @@
 }
 .vectable{
   width: 850px;
+  @include mobile {
+    width: 100%;
+    overflow: scroll;
+  }
   table {
     border-bottom: 3px solid #e8e8e8;
     margin-bottom: 60px;
@@ -522,5 +593,22 @@
 }
 a:hover{
   text-decoration: none; 
+}
+img{
+  @include mobile {
+    width: 100%
+  }
+}
+.title-text{
+  img{
+    @include mobile {
+    width: auto ;
+  }
+  }
+}
+.MuiList-root {
+    @include mobile {
+      overflow: scroll !important;
+  }
 }
 
