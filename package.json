@@ -10,7 +10,7 @@
     "i18next-browser-languagedetector": "^3.0.3",
     "image-to-base64": "^2.0.1",
     "material-table": "^1.50.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-i18next": "^10.12.4",
